@@ -1,5 +1,7 @@
 #### 20210510 (월) 작업내역 
-- 잘 변경되나? 잘 하고 계십니다.^^
+- git pull문제였던 것: vs code에서 폴더를 설정하고 clone를 실행하여 만들어진 devilasu.github.io폴더 안에 github아이디인 devilasu.github.io폴더가 다시 만들어지고 그 안에 자료가 복사되었다. 따라서 터미널에서 설정된 경로와 실제 자료가 있는 경로가 불일치하여 문제가 발생했다.
+- git pull의 경우에는 .git 폴더가 있어야 사용가능하다.
+- git clone <주소>는 github에 있는 자료를 그대로 복사한다.(최초에 실행이며 .git폴더도 만들어진다.)
 - 별개: git에는 branch, remote저장소개념이 있다. remote개념에서 clone라는 개념이 나온다.
 - breanch (분기)의 경우에는 작업이 어느 지점에서 갈라져서 작업이 될 경우에 쓰이는 듯 하다. git checkout으로 이동 가능
 - remote는
