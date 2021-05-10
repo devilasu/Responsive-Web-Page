@@ -1,6 +1,6 @@
 #### 20210510 (월) 작업내역
 - Git에서 'User Name' 'User Mail'추가하라고 떠요
-- 해결책:
+- 해결책
 - git config --local user.name 이름
 - git config --local user.email 이메일
 - 업로드절차: 1. 커밋(commit)  2. 푸시(push)
