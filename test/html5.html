@@ -38,16 +38,24 @@
         }
         div#contents {
             /* 내부의 컨텐츠 기준되는 외부요소에 관계형 포지션 추가 */
-            position:relative;
-            height:200px
+            position:flex;
+            flex-flow:column;
             
         }
         section {
-            width: 50%; height:100%; display:inline-block;
+            width: 80%; height:100%; display:inline-block;
+            left:0px; top:0px;
         }
         aside {
-            width: 40%; height:100%; display:inline-block;
-            position:absolute;
+            width: 20%; height:100%; display:inline-block;
+            right:0px; top:0px;
+            
+            
+        }
+
+        section > article{
+            margin: 5px 30px;
+            border:1px solid skyblue;
         }
     </style>
     <header>
@@ -64,7 +72,10 @@
         <section>
             <h1>section</h1>
             <article>
-                <h1>article</h1>
+                <h1>article1</h1>
+            </article>
+            <article>
+                <h1>article2</h1>
             </article>
         </section>
         <aside>
@@ -75,6 +86,9 @@
         <h1>footer</h1>
     </footer>
 
+
+    <br>
+    <br>
     <!--
         테이블 태그 제어: 셀병합 
         table, tr(table row줄), td(table data칸)
@@ -127,7 +141,7 @@
         <input type="submit" value="서밋">
     </form>
     <!-- 유튜브영상 집어넣기 -->
-    <iframe style = "width:100%; height:100vw"src="http://human.or.kr" frameborder = "0"></iframe>
+    <iframe style = "width:100%; height:400px"src="http://human.or.kr" frameborder = "0"></iframe>
     <iframe style = "width:100%; height:100vw" src="https://www.youtube.com/embed/UOxkGD8qRB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <!-- 컨텐츠 경로: 상대적 경로, 절대경로 -->
     <img style = "width: 100%;" src = "./img/cat.jpg" alt="엘박일때 표시할 내용">

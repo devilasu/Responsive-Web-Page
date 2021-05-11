@@ -1,4 +1,5 @@
 #### 20210511 (화) 작업내역
+- padding는 내부여백, margin은 외부여백
 - div가 id 면 div#  div가 class면 div.
 - <iframe> 에서 반응형을 만들 때, width, height를 그냥 설정하면 vw나 vh를 사용하지 못하지만 style을 사용하여 설정하면 단위를 vw를 사용하여 반응형으로 만들 수 있다.
 - 유튜브영상 넣는법: 우클릭->소스코드 복사 붙여넣기
