@@ -32,16 +32,28 @@
         nav > ul > li {
             float:left; margin-right:30px;
         }
-        section {
-            width: 75%; float:left;
-        }
-        aside {
-            width: 25%; height:100%; float:right;
-        }
-
         section > article{
             margin: 5px 30px;
             border:1px solid skyblue;
+        }
+
+        section{
+            height:100%;
+        }
+        div#sectiondiv {
+            width: 75%; height:100%; float:left;
+        }
+
+        div#asidediv {
+            width: 25%; height:100%; float:right;
+        }
+        div#containerdiv{
+            position:relative;
+            height:280px;
+            overflow:auto;
+        }
+        aside{
+            height:100%;
         }
     </style>
 <body>
@@ -55,21 +67,27 @@
             <li><a href="#">menu3</a></li>
         </ul>
     </nav>
-    <section>
-        <h1>section</h1>
-        <article>
-            <h1>article1</h1>
-        </article>
-        <article>
-            <h1>article2</h1>
-        </article>
-    </section>
-    <aside>
-        <h1>aside</h1>
-    </aside>
-    <footer>
-        <h1>footer</h1>
-    </footer>
+    <div id="containerdiv">
+        <div id="sectiondiv">
+            <section>
+                <h1>section</h1>
+                <article>
+                    <h1>article1</h1>
+                </article>
+                <article>
+                    <h1>article2</h1>
+                </article>
+            </section>
+        </div>
+        <div id="asidediv">
+            <aside>
+                <h1>aside</h1>
+            </aside>
+        </div>
+    </div>
+        <footer>
+            <h1>footer</h1>
+        </footer>
 
 
     <br>
