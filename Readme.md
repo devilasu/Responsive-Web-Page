@@ -1,7 +1,9 @@
 #### 20210511 (화) 작업내역
+- 내가 사용한 방식: section과 article을 <div>로 씌워주고 aside에 <div>로 씌워준 뒤 전체에 <div>를 씌워준 후 div의 설정값을 조정.
 - padding는 내부여백, margin은 외부여백
 - div가 id 면 div#  div가 class면 div.
 - <iframe> 에서 반응형을 만들 때, width, height를 그냥 설정하면 vw나 vh를 사용하지 못하지만 style을 사용하여 설정하면 단위를 vw를 사용하여 반응형으로 만들 수 있다.
+- **<iframe>에서 홈체이지 좌우가 짤려있다.
 - 유튜브영상 넣는법: 우클릭->소스코드 복사 붙여넣기
 - 로렘입숨 한글 http://guny.kr/stuff/klorem
 - 로렘입숨 영어 http://loremipsum.io/generator
