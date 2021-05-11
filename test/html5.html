@@ -17,8 +17,7 @@
         }
     </style>
 </head>
-<body>
-    <!-- 
+<!-- 
         HTML5 레이아웃 구조에 사용된 태그
         header, nav, section, article, aside, footer
     -->
@@ -36,19 +35,13 @@
         nav > ul > li {
             float:left; margin-right:30px;
         }
-        div#contents {
-            /* 내부의 컨텐츠 기준되는 외부요소에 관계형 포지션 추가 */
-            position:flex;
-            flex-flow:column;
-            
-        }
         section {
-            width: 80%; height:100%; display:inline-block;
-            left:0px; top:0px;
+            width: 75%; display:inline-block;
+            float:left;
         }
         aside {
-            width: 20%; height:100%; display:inline-block;
-            right:0px; top:0px;
+            width: 25%; height:100%; display:inline-block;
+            float:right;
             
             
         }
@@ -61,6 +54,7 @@
     <header>
         <h1>Header</h1>
     </header>
+<body>
     <nav>
         <ul>
             <li><a href="#"">menu1</a></li>
@@ -68,20 +62,18 @@
             <li><a href="#"">menu3</a></li>
         </ul>
     </nav>
-    <div id = "contents">
-        <section>
-            <h1>section</h1>
-            <article>
-                <h1>article1</h1>
-            </article>
-            <article>
-                <h1>article2</h1>
-            </article>
-        </section>
-        <aside>
-            <h1>aside</h1>
-        </aside>
-    </div>
+    <section>
+        <h1>section</h1>
+        <article>
+            <h1>article1</h1>
+        </article>
+        <article>
+            <h1>article2</h1>
+        </article>
+    </section>
+    <aside>
+        <h1>aside</h1>
+    </aside>
     <footer>
         <h1>footer</h1>
     </footer>
