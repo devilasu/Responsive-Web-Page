@@ -1,4 +1,6 @@
 #### 20210511 (화) 작업내역
+- 로렘입숨 한글 http://guny.kr/stuff/klorem
+- 로렘입숨 영어 http://loremipsum.io/generator
 - 줄바꿈이 이루어지는 영역태그를 블럭영역 <p>
 - 줄바꿈이 이루어지지 않는 영역은 인라인블럭영역 <span>
 - p태그는 문단의약자(Paragraph)
@@ -19,7 +21,7 @@
 
 - git문제점
 - 무한로딩: vs code를 껐다가 킨다.
-- 에러-영어 promission: 자격증명관리자에서 제거, cmd에서 git credential-manger uninstall --force
+- 에러-영어 promission: 자격증명관리자에서 제거, cmd 관리자권한실행 git credential-manger uninstall --force
 - 에러-user.name, user.email: 터미널에서 git config --local user.name 이름, git config --logcal user.email 이메일
 - 에러-읽기전용: 터미널을 확인. 껐다가 새 터미널
 - 깃의 사용 순서: 저장(파일저장)->스테이징(커밋 전 임시저장)->커밋(푸쉬 전에 임시저장)->푸쉬(실제로 올라감)

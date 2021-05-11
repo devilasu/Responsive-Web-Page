@@ -5,13 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 실습</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+            font-size: 14px
+        }
+    </style>
 </head>
 <body>
+    <!-- 유튜브영상 집어넣기 -->
+    <iframe width="690" height="388" src="https://www.youtube.com/embed/UOxkGD8qRB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- 컨텐츠 경로: 상대적 경로, 절대경로 -->
+    <img style = "width: 100%;" src = "./img/cat.jpg" alt="엘박일때 표시할 내용">
+
+    <img style = "width: 100%;" src = "/test/img/cat.jpg" alt="엘박일때 표시할 내용">
+    <!-- 영역지정 div: division, 가상링크 #으로 생성 -->
+    <div style="background-color: rgb(111,138,189)">
+        <a href="#">네이버</a>
+        <a href="#">네이버</a>
+        <a href="#">네이버</a>
+    </div>
+
+    <!-- 리스트형 2가지: ol(Ordered List), ul(Unordered List) ol>li{}*3-->
+    <ol type="I">
+        <li>헬로 html</li>
+        <li>헬로 html</li>
+        <li>헬로 html</li>
+    </ol>
+
+    <ul>
+        <li>헬로 html</li>
+        <li>헬로 html</li>
+        <li>헬로 html</li>
+    </ul>
+    <!-- H2O, x2 아래첨자, 위첨자로 보입니다. -->
+    <p>H<sub>2</sub>O</p>
+    <p>X<sup>2</sup>=4</p>
+    <!-- lorem 입숨(립숨)은 작업공간에 채울내용을 자동으로 생성해 주는 기능
+    lorem<숫자>, 로렘입숨 홈페이지 등에서 쓸 수 있다.
+    -->
+    <p></p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>모든 국민은 건강하고 쾌적한 환경에서 생활할 권리를 가지며, 국가와 국민은 환경보전을 위하여 노력하여야 한다.</td>
+                <td>오달제</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>대한민국은 통일을 지향하며, 자유민주적 기본질서에 입각한 평화적 통일 정책을 수립하고 이를 추진한다.</td>
+                <td>문무왕</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>헌법재판소 재판관은 정당에 가입하거나 정치에 관여할 수 없다.</td>
+                <td>혜초</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.</td>
+                <td>한명회</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>모든 국민은 직업선택의 자유를 가진다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.</td>
+                <td>의자왕</td>
+            </tr>
+        </tbody>
+        </table>
+        
+
     <!-- html:콜론, ;세미콜론 -->
     <!-- 도메인(사람이확인) == IP주소(컴퓨터시스템) -->
+    <!-- 매칭(묶어줌) = 바인딩(묶어줌) -->
     <!-- 사람색상(color): red, blue, skyblue, black -->
-    <!-- 컴퓨터색상(color): -->
-    <span style="color:#5b02a8">헬로 html</span>
+    <!-- 컴퓨터색상(color): #ff0000: #:16진수, ff:R값, 00:G값, 00:B값
+         빛의 3원색 ex) #ffffff = #fff = white = rgb(255,255,255)-->
+    <!-- 16진수: 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f = 총 16개 -->
+    <span style="color:rgb(255,255,0)">헬로 html</span>
     <span>헬로 html</span>
     <hr>
     <br>
