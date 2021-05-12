@@ -1,9 +1,21 @@
+//
+
+//연산자: 논리 &&, ||, !
+var x,y;
+x= true; y= false;
+document.write(x&&y);
+document.write("<br>");
+document.write(x||y);
+document.write("<br>");
+document.write(!x);
+document.write("<br>");
+document.write(!y);
+document.write("<hr>");
+
 var x, y, z;
 x = 5;
 y = 2;
 z = '5';
-//연산자: 
-
 //연산자: 비교연산
 document.write(x>y);
 document.write("<br>");
@@ -21,7 +33,9 @@ document.write("<hr>");
 
 //연산자: 사칙연산
 
-
+var x, y;
+x = 5;
+y = 2;
 document.write(x+y);
 document.write("<br>");
 document.write(x-y);
