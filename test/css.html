@@ -12,33 +12,6 @@
  <!-- css 적용하는 3가지 방법 내부css, 외부css, 인라인css  -->
  <!-- 내부css -->
  <link rel="stylesheet" href="./style.css">
- <style>
-     /* 선택자 종류 
-     범용선택자:    * (별표:애스터리스크)
-     태그선택자:    h1, h2, p, div, header, footer, atricle 등등
-     class선택자:   .class명, 특징: 중복사용 가능
-     id선택자:      #id명 특징: 중복선언하면 오동작이 발생
-     가상선택자:    ::after, ::before
-     가상요소(element-가상태그):      :hover
-     a:hover a태그에 마우스가 올라갔을 때
-     */
-     h1{
-         background-color: skyblue;
-     }
-    div *{
-         color: rgb(72, 192, 176);
-     }
-     .box-one, .box-two {
-         background-color: tomato;
-     }
-
-     #box-four, #box-five{
-         background-color: yellow;
-     }
-     .box-one p::after{content: '         + add';}
-     .box-one p::before{content: 'add+'}
-     a:hover{color:white;}
- </style>
 </head>
 <body>
     <h1>Hello css</h1>
@@ -48,6 +21,6 @@
     <div id="box-four">four</div>
     <div id="box-five">five</div>
     <!-- 인라인 css -->
-    <!-- <p><span style="color:tomato">Lorem ipsum</span> dolor, sit amet consectetur adipisicing elit. Architecto, praesentium dolor? Saepe autem distinctio soluta architecto atque totam enim ut libero eum adipisci iusto consectetur voluptatum deserunt minima, nisi quaerat assumenda ipsa numquam dolor cum ipsam. Ad, odio! Dolores modi in, quia repudiandae qui repellendus sunt exercitationem quos ipsa molestias magnam adipisci dignissimos, eius minus ex odit veniam recusandae obcaecati ea rerum quod quisquam deserunt repellat ipsum. Iusto obcaecati corporis, reprehenderit porro cum sit cupiditate beatae facilis eligendi modi consectetur esse ullam veritatis laudantium est omnis! Ipsam aperiam obcaecati odit porro. Magnam, sed? Magnam saepe error assumenda similique? Itaque, suscipit.</p> -->
+    <p><span style="color:tomato">Lorem ipsum</span> dolor, sit amet consectetur adipisicing elit. Architecto, praesentium dolor? Saepe autem distinctio soluta architecto atque totam enim ut libero eum adipisci iusto consectetur voluptatum deserunt minima, nisi quaerat assumenda ipsa numquam dolor cum ipsam. Ad, odio! Dolores modi in, quia repudiandae qui repellendus sunt exercitationem quos ipsa molestias magnam adipisci dignissimos, eius minus ex odit veniam recusandae obcaecati ea rerum quod quisquam deserunt repellat ipsum. Iusto obcaecati corporis, reprehenderit porro cum sit cupiditate beatae facilis eligendi modi consectetur esse ullam veritatis laudantium est omnis! Ipsam aperiam obcaecati odit porro. Magnam, sed? Magnam saepe error assumenda similique? Itaque, suscipit.</p>
 </body>
 </html>
