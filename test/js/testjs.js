@@ -1,6 +1,32 @@
+
+
+//인터넷 자료교환 대량 데이터형식:xml 태그 데이터 방식
+//지금은 json(javaScript Object Notation)자바스크립트 객체 표식
+var human = {
+    name:{
+        firstname:'김',
+        lastname:"영제"
+    },
+    age:10,
+    married:true
+}
+//json데이터는 Key:value로 이루어져 있다.
+document.write(typeof(human));
+document.write("<br>");
+document.write(human["name"]);
+document.write("<br>");
+document.write(human["name"]["firstname"]);
+document.write("<br>");
+document.write(human["name"]["lastname"]);
+document.write("<br>");
+document.write(human["age"]);
+document.write("<br>");
+document.write(human["married"]);//값을 파싱할때 키로 뽑아냅니다.
+document.write("<hr>");
+
 //사용자데이터형: object(array)
 //참고: 기본형 데이터: number, string, boolean
-var arrays = [10,20,60,30,40];
+var arrays = [10,20,30,40];
 document.write(typeof(arrays));
 document.write("<br>");
 document.write(arrays[2]);
@@ -19,7 +45,7 @@ document.write(arrays.join("!!"));
 document.write("<br>");
 document.write(arrays);
 document.write("<br>");
-document.write(arrays.sort(function(a,b){return b-a}));
+document.write(arrays.sort(function(a,b){return b-a;}));
 document.write("<hr>");
 //날짜내장함수 사용
 var date = new Date;//new 키워드(예약어)로 함수형변수 생성
