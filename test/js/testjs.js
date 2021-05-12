@@ -1,5 +1,39 @@
-
-
+//사용자데이터형: object(array)
+//참고: 기본형 데이터: number, string, boolean
+var arrays = [10,20,60,30,40];
+document.write(typeof(arrays));
+document.write("<br>");
+document.write(arrays[2]);
+document.write("<br>");
+document.write(arrays.slice(1,4));
+document.write("<br>");
+document.write(arrays.pop());
+document.write("<br>");
+document.write(arrays);
+document.write("<br>");
+document.write(arrays.push(1000));
+document.write("<br>");
+document.write(arrays);
+document.write("<br>");
+document.write(arrays.join("!!"));
+document.write("<br>");
+document.write(arrays);
+document.write("<br>");
+document.write(arrays.sort(function(a,b){return b-a}));
+document.write("<hr>");
+//날짜내장함수 사용
+var date = new Date;//new 키워드(예약어)로 함수형변수 생성
+document.write(date);
+document.write("<br>");
+document.write(date.getMonth()+1 + '월'); //0부터 시작 1월0, 2월1
+document.write("<br>");
+document.write(date.getDay() + "요일"); //일0,월1,화2,수3
+document.write("<br>");
+document.write(date.getDate() + '일');
+document.write("<br>");
+document.write(date.getHours() + '시');
+document.write("<hr>");
+//인터페이스는 함수명만 있고, 구현내용은 없는 데이터자료형
 //내장함수란? 아래 사용자가 만든 plus함수가 아닌, 웹브라우저 내장함수
 //웹브라우저 내장 함수: 자바스크립트는 웹브라우저에 내장된 언어
 var txt = "kimyoungjea is javascript";
@@ -23,7 +57,7 @@ document.write(num.toString()+num.toString());//문자열로 바꿈
 document.write("<br>");
 document.write(Math.PI);//파이
 document.write("<br>");
-document.write(Math.max(10,20,30));//최대값
+document.write(Math.max(10,20,30, 50));//최대값
 document.write("<br>");
 document.write(Math.random()*10);//1이하의 랜덤
 document.write("<hr>");
