@@ -1,4 +1,46 @@
-//
+
+
+//내장함수란? 아래 사용자가 만든 plus함수가 아닌, 웹브라우저 내장함수
+//웹브라우저 내장 함수: 자바스크립트는 웹브라우저에 내장된 언어
+var txt = "kimyoungjea is javascript";
+var num = 10;
+document.write(txt.length);
+document.write("<br>");
+document.write(txt.indexOf("is"));//찾은 문자열 인덱스 리턴
+document.write("<br>");
+document.write(txt.slice(0,7));//(시작, 번째 글자까지)문자열 슬라이스
+document.write("<br>");
+document.write(txt.replace("is","는"));//(찾을문자, 바꿀문자)
+document.write("<br>");
+document.write(txt.toUpperCase());//대문자
+document.write("<br>");
+document.write(txt.toLowerCase());//소문자
+//데이터를 파싱(Parsing) 한다고 합니다.
+document.write("<br>");
+document.write(num.toFixed(6));//소수6자리
+document.write("<br>");
+document.write(num.toString()+num.toString());//문자열로 바꿈
+document.write("<br>");
+document.write(Math.PI);//파이
+document.write("<br>");
+document.write(Math.max(10,20,30));//최대값
+document.write("<br>");
+document.write(Math.random()*10);//1이하의 랜덤
+document.write("<hr>");
+
+//함수 변수사용
+var plus = function(x,y)//무명함수, anonymous함수, 콜백함수
+{
+    return x+y;
+}
+function plus(x,y){ //함수명이 존재
+    return x+y
+}
+
+document.write("Plus라는 변수는 데이터타입이 " + typeof(plus));
+document.write("<br>");
+document.write(plus(4,6));
+document.write("<hr>");
 
 //연산자: 논리 &&, ||, !
 var x,y;
