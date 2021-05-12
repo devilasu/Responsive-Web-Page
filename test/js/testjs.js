@@ -1,4 +1,70 @@
+//
 
+//변수 영역
+var i = 10;
+var ii=0;
+if(i>5){
+    let ii = 100;
+}else{
+    let ii = 200;
+}
+function test(params){
+    var ii = 200;
+}
+
+test(1);
+document.write(ii);
+document.write("<hr>");
+
+//반복문
+var arrays = [10,20,30,40,50];
+for(var i = 0 ;i<arrays.length;i++)
+{
+    document.write(arrays[i]);
+    document.write("<br>");
+}
+document.write("<hr>");
+
+for(var i = (arrays.length-1 );i>=0;i--)
+{
+    document.write(arrays[i]);
+    document.write("<br>");
+}
+document.write("<hr>");
+var i = 0;
+while(i<arrays.length){
+    document.write(arrays[i]);
+    document.write("<br>");
+    i++;
+}
+document.write("<hr>");
+//switch case문
+var key = 3;
+switch(key){
+    case 1:
+        document.write(key + "를 선택했습니다.");
+        break;
+    case 2:
+        document.write(key + "를 선택했습니다.");
+        break;
+    case 3:
+        document.write(key + "를 선택했습니다.");
+        break;
+    default:
+        document.write("선택된 key가 없습니다.");
+        break;
+}
+document.write("<hr>");
+//조건문
+if(false){
+    document.write("헬로 자바스크립트");
+}else if(true){
+    document.write("1");
+}else if(true){
+    document.write("2");
+}
+
+document.write("<hr>");
 
 //인터넷 자료교환 대량 데이터형식:xml 태그 데이터 방식
 //지금은 json(javaScript Object Notation)자바스크립트 객체 표식
