@@ -42,3 +42,29 @@ a:hover{color:white;}
     /* font-size: 1.5rem; */
     /* 위에부터 해석하는 방식을 인터프러터형=자바스크립트는 인터프리터형 언어 */
 }
+.box-one{
+    width:200px;
+    height:200px;
+    background-color: green;
+    /* 여백: 4가지방향 12시 시작 시계방향, 2가지방향 상하 / 좌우 */
+    /* 안쪽여백: padding */
+    /* 바깥여백: margin */
+    padding: 20px;
+    margin:20px 10px 50px 80px;
+    margin: 30px 60px;
+    border:10px solid black;
+    box-sizing:border-box;
+    /* 가로 가운데 정렬하는 방법 */
+    margin: 0px auto;/*0이 상하 auto가 좌우*/
+    /* position:absolute 하는 순간 초기화(?) 이전 margin값들이 사라진다. */
+    /*position:absolute;/* 자리가 다른 태그와 관련없이 위치 */
+    position:fixed; /*fixed는 고정 화면을 따라온다.(quick메뉴)*/
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.box-two{
+    width:200px;
+    height: 200px;
+    background-color: red;
+    box-sizing: border-box; /* 필수 */
+}
