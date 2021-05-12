@@ -1,6 +1,6 @@
 //여러개의 element 선택
 var names = $("#name");
-var names = document.getElementById("name");    //1개만 선택
+// var names = document.getElementById("name");    //1개만 선택
 var inputName = document.getElementsByName("name")//1개이상 선택
 //네이밍 방식: 카멜(낙타등)표기법 소문자 시작 단어시작시 대문자
 var className = document.getElementsByClassName("two"); //1개 이상 선택
