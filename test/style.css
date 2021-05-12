@@ -3,6 +3,42 @@ body{
 font-family: 'Nanum Gothic', sans-serif;
 }
 
+h1{
+    background-color: skyblue;
+}
+div *{
+    color: rgb(72, 192, 176);
+}
+.box-one, .box-two {
+    background-color: tomato;
+}
+
+#box-four, #box-five{
+    background-color: yellow;
+}
+   /* 선택자 종류 
+     범용선택자:    * (별표:애스터리스크)
+     태그선택자:    h1, h2, p, div, header, footer, atricle 등등
+     class선택자:   .class명, 특징: 중복사용 가능
+     id선택자:      #id명 특징: 중복선언하면 오동작이 발생
+     가상선택자:    ::after, ::before
+     가상요소(element-가상태그):      :hover
+     a:hover a태그에 마우스가 올라갔을 때
+     */
+.box-one p::after{content: '         + add';}
+.box-one p::before{content: 'add+'}
+a:hover{color:white;}
+/* 크기단위 font크기, img 크기, 유튜브영상크기 단위종류:px, em(배수), rem(root기반배수) */
 .box-one{
-    font-family: 'Nanum Gothic'; color:blue;
+    font-size: 8px;
+    /*웹브라우저 기본 폰트크기는 16px = 1em*/
+    /* font-size: 1.5em; */
+    /* font-size: 1.5rem;  */
+}
+.box-one p{
+    /* 웹브라우저 기본폰트크기인 16px의 1.5배가 아니고, 부모요소의 1.5배(8px의 1.5배) */
+    font-size:1.5em;
+    /* rem은 브라우저 기본폰트크기의 배수 */
+    /* font-size: 1.5rem; */
+    /* 위에부터 해석하는 방식을 인터프러터형=자바스크립트는 인터프리터형 언어 */
 }
