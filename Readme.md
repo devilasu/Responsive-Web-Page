@@ -1,5 +1,5 @@
 #### 20210512 (수) 작업내역
--
+-iframe으로 홈페이지를 띄울때 live server에서는 실행되었으나 github로 푸쉬 이후 홈페이지에서는 뜨지 않는 현상.
 -가상 선택자를 통한 추가에서 Space는 중복되지 않는다.
 - user.name, user.email 확인법: git config --list, user.name, user.email 확인.
 - 프로젝트를 1명 제작하는 경우는 없기 때문에, 2명일때 소스 수정한 사람 확인용 정보입니다.
