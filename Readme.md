@@ -1,5 +1,5 @@
 #### 20210512 (수) 작업내역
-- user.name, user.email 확인법: git config --list
+- user.name, user.email 확인법: git config --list, user.name, user.email 확인.
 - 프로젝트를 1명 제작하는 경우는 없기 때문에, 2명일때 소스 수정한 사람 확인용 정보입니다.
 #### 20210511 (화) 작업내역
 - 내가 사용한 방식: section과 article을 <div>로 씌워주고 aside에 <div>로 씌워준 뒤 전체에 <div>를 씌워준 후 div의 설정값을 조정.
