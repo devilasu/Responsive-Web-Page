@@ -1,6 +1,8 @@
 /* 외부css */
 body{
+    /* 폰트 명 '' "" 따옴표가 붙은 폰트면, 따옴표가 없는 폰트명 (공백이 있고 없고.) */
 font-family: 'Nanum Gothic', sans-serif;
+
 }
 
 h1{
@@ -58,7 +60,7 @@ a:hover{color:white;}
     margin: 0px auto;/*0이 상하 auto가 좌우*/
     /* position:absolute 하는 순간 초기화(?) 이전 margin값들이 사라진다. */
     /*position:absolute;/* 자리가 다른 태그와 관련없이 위치 */
-    position:fixed; /*fixed는 고정 화면을 따라온다.(quick메뉴)*/
+    position:fixed; /*fixed는 상단 고정메뉴.(quick메뉴)*/
     margin-top: 20px;
     margin-left: 20px;
 }
