@@ -1,15 +1,49 @@
-//
+//jQuery CDN :Contents Delivery Network 인터넷으로 외부 프로그램을 가져다 사용. 단, 인터넷 안되는 곳 불가.
+//jQuery의 기본형식 $시작 문서가 준비되었을때 자동구현
+//인터프리터의 단점 위에서부터 아래로 실행되는 순서를 신경쓰지 않아도 된다.(jQuery는 문서 위에 있어도 괜찮다.)
+// $(document).ready(function(){});
+$(document).ready(function(){
+    $("#checkValue").click(function(){
+        alert($("#name").val());
+        $("#one").css("backgroundColor","blue");
+    })
+    // html 문서를 다 읽은 후 내용 실행.
+});
 
-//변수 영역
+//여러개의 element 선택
+var names = $("#name");
+// var names = document.getElementById("name");    //1개만 선택
+var inputName = document.getElementsByName("name")//1개이상 선택
+//네이밍 방식: 카멜(낙타등)표기법 소문자 시작 단어시작시 대문자
+// var className = document.getElementsByClassName("two"); //1개 이상 선택
+// console.log(className);
+// document.write("<br>")
+// document.write(className[0]["innerHTML"]);
+// document.write("<br>")
+// document.write(className[1]["innerHTML"]);
+// document.write("<br>")
+// console.log(inputName);
+// document.write(inputName[0]["defaultValue"]);
+function checkValue(){
+    // alert(inputName[0]["value"]);
+    alert(names.val());
+    $("#one").css("backgroundColor","red");//jQuery
+    // document.getElementById("one").style.backgroundColor = "red";
+}
+
+document.write("<hr>");
+
+//변수의 영역
+//function스코프 var, 블록scope let, const
 var i = 10;
 var ii=0;
 if(i>5){
-    let ii = 100;
+    let ii = 100;   //let변수는 {블럭}영역 안쪽에서만 효력이 있다.
 }else{
     let ii = 200;
 }
 function test(params){
-    var ii = 200;
+    var ii = 200;   //변수 재정의, 재정의 된 변수는 함수내에서 소멸
 }
 
 test(1);
