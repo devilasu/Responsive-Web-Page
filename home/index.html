@@ -16,15 +16,26 @@
 <link rel="stylesheet" href="/home/css/mobile.css">
 <style>
 /* 모바일용 메인페이지 스타일 지정(아래) */
-/* 공통영역 */
-body{ /* body태그 안에 a태그에는 적용X */
-    font-family: "Nanum Gothic", sans-serif !important;
-    font-size: 16px !important; /* 중요함, body의 font크기는 16px로 고정 */
-    letter-spacing: -1px !important;
-    color: #444 !important;
-    word-wrap: break-word !important;
+/* 로고영역 */
+.header_area h1{
+    float: none;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 3px 0 0;/* 상하, 좌, 우 */
 }
-
+.header_area h1 a{
+    /* 로고는 이미지인데 글을 더한 이유는 웹접근성때문에 추가(스크린리더: 시각장애인용 프로그램) */
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    background: url(/home/img/logo-tree.png) no-repeat;/* css3는 함수를 지원합니다. no-repeat가 없으면 반복출력 */
+    background-size: 50px 60px !important;
+    background-position: center center !important;/* 이미지 위치 */
+    text-indent: -9999px; /* 들여쓰기 이미지만 보이고, 글자는 숨기기 위해서 */
+    overflow: hidden;
+}
+/* //로고영역 */
 </style>
 <script>
 $(document).ready(function() {
@@ -39,7 +50,7 @@ $(document).ready(function() {
 	<header id="header">
 		<div class="header_area box_inner clear">
 			<!-- 상단로고영역 -->
-			<h1><a href="index.html">스프링 in 자바</a></h1>
+			<h1><a href="/index.html">스프링 in 자바</a></h1>
 			<!-- //상단로고영역 -->
 			
 			<!-- 상단메뉴메뉴영역 -->

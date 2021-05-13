@@ -1,2 +1,50 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* 공통영역 */
+body{ /* body태그 안에 a태그에는 적용X */
+    font-family: "Nanum Gothic", sans-serif !important;
+    font-size: 16px !important; /* 중요함, body의 font크기는 16px로 고정 */
+    letter-spacing: -1px !important;
+    color: #444 !important;
+    word-wrap: break-word !important; /* 줄바꿈 할 때, 단어단위로 */
+    line-height: 1 !important;/* 단위가 1이면 1.0배이므로 16px */
+}
+dl, ol, ul{margin-bottom: 0 !important;}
+#container a:hover {color: #000 !important;}/* : 가상선택자, ::가상요소 */
+a:link{color:#444;}
+a:hover{color:#fff !important;}
+a:visited{color:#444;}
+a{text-decoration: none;}/* 링크의 밑줄이 사라짐 */
+/* 클래스 선택자 */
+.clear::after{
+    content: '';
+    clear: both;/* 위치지정 float 속성값 초기화 */
+    display: block;/* float는 블럭 속성이 없어진 것을 clear시키면, 다시 block 속성을 갖게 하는 것. */
+}
+.txt_right{
+    text-align: right !important;
+}
+.mt20{  /*mt네이밍은 부트스트랩과 동일*/
+    margin-top: 20px !important;
+}
+.w100p{
+    width:100% !important;
+}
+/* //공통영역 */
+
+/* 헤더영역 */
+.on{background: #32353d;}
+header{
+    height: 90px;
+    text-align: center;
+    z-index: 200;/* z의 순서: 높을 수록 위에 배치.*/
+    background: rgba(0,0,0,0.5);
+    position: absolute;/* left, top 값이 제대로 먹힌다. */
+    left:0; top:0;
+    width:100%;
+}
+.box_inner{
+    width: 100%; margin: 0 auto;
+}
+/* //헤더영역 */
