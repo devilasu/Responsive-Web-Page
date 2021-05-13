@@ -13,9 +13,18 @@
 <!-- chrome, IE, Edge, Safari, fireFox의 h1, p, ul, div영역의 태그의 크기가 전부 조금씩 다르다. -->
 <!-- 작업한 결과가 모든 브라우저에서 다르게 보이는걸 똑같이 보이게 하기 위한 reset.css(crossingBrowser) -->
 <link rel="stylesheet" href="/home/css/reset.css">
-
+<link rel="stylesheet" href="/home/css/mobile.css">
 <style>
 /* 모바일용 메인페이지 스타일 지정(아래) */
+/* 공통영역 */
+body{ /* body태그 안에 a태그에는 적용X */
+    font-family: "Nanum Gothic", sans-serif !important;
+    font-size: 16px !important; /* 중요함, body의 font크기는 16px로 고정 */
+    letter-spacing: -1px !important;
+    color: #444 !important;
+    word-wrap: break-word !important;
+}
+
 </style>
 <script>
 $(document).ready(function() {
