@@ -16,135 +16,13 @@
 <link rel="stylesheet" href="/home/css/mobile.css">
 <style>
 /* 모바일용 메인페이지 스타일 지정(아래) */
-/* 상단메뉴영역 */
-.openMOgnb{/* gnb: Global Navigation Bar(주로 메뉴명칭으로 사용)*/
-    display: block;
-    position: absolute;
-    left: 15px;
-    top: 35px;
-    width: 25px;
-    height: 16px
-}
-.hdd{
-    text-indent: -9999px;
-    position: absolute
-}
 
-.openMOgnb span{
-    box-sizing: border-box;/* 박스 크기를 테두리까지 크기 고정 */
-    display: block;
-    width: 25px; height: 3px;
-    margin-bottom: 4px;
-    border-radius: 10px; /* 테두리 라운드 처리 */ 
-    background: #fff;
-}
+/* 갤러리 최근 게시물 영역 */
 
-.openMOgnb span:first-of-type + span {width: 17px;} /* 인접형제경합자 */
-/* .openMOgnb span + span {width: 17px;}
-.openMOgnb span:last-child{
-    width:25px;
-    margin-bottom: 0px;
-} */
+/* //갤러리 최근 게시물 영역 */
 
-.header_cont{
-    float:none;
-    width: 100%;
-    background: #31353d;
-    /* display: none; */
-    margin-top:36px;
-}
 
-.closePop{
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 15px;
-}
-
-.closePop a{
-    display: block;
-    width: 60px; height: 60px;
-    text-indent: -9999px;
-    overflow: hidden;
-    background: url(./img/btn_closeMenu.png) no-repeat;
-    background-size: 60px;
-}
-
-.util{padding: 20px;}
-
-.header_cont a{
-    color:#fff; font-size: 16px;
-}
-
-.util li{
-    float:left;
-}
-
-.util li::after{
-    /* ::가상요소를 추가 */
-    content: '|';
-    display:inline-block;
-    padding: 0 10px;
-    color: #a2a2a3 ;
-    font-size: 10px;
-    position:relative;
-    top: -2px;
-}
-
-.util li:last-child::after{
-    /* li 마지막 태그에 마지막부분 */
-    content: '';
-    display: none;
-    /* 둘 중 하나만 해도 된다. */
-}
-
-.gnb {
-    float: none;
-    box-sizing: border-box;
-    padding-top: 0px;
-    height: auto;
-    border-top: 1px solid #83868b;
-}
-
-.gnb li{
-    float:left;
-    width:50%;
-    text-align: left;
-    box-sizing: border-box;
-    border-bottom: 1px solid #83868b;
-}
-
-.gnb li a{
-    display: block;
-    padding: 0 0 0 65px;
-    height: 60px;
-    line-height: 60px;
-    background: url(./img/ico_gnb01.png) no-repeat 10px center;
-    background-size: 49px 56px;
-}
-
-.gnb_depth {
-    /* 2차(서브)메뉴 */
-    display: none;
-}
-
-.gnb li + li a{
-    background-image: url(./img/ico_gnb02.png);
-}
-
-.gnb li + li + li a {
-	background-image: url(./img/ico_gnb03.png);
-}
-
-.gnb li + li + li + li a {
-	background-image: url(./img/ico_gnb04.png);
-}
-
-.gnb li:nth-child(2n+1){
-    border-right: 1px solid #83868b;
-}
-
-/* //상단메뉴영역 */
+ 
 </style>
 <script>
 $(document).ready(function() {
@@ -207,32 +85,32 @@ $(document).ready(function() {
             <div class="visualRoll">
             	<!-- 슬라이드이미지영역 -->
                 <ul class="viewImgList">
-                    <li class="imglist0">
+                    <li class="imgList0">
                         <div class="roll_content">
                             <a href="javascript:;">
-							<p class="roll_txtline">OOOO OOOOOOOOO OOOOOOOOO OOOOO</p>
+							<p class="roll_txtline">1OOO OOOOOOOOO OOOOOOOOO OOOOO</p>
 							</a>
                         </div>
                     </li>
-                    <li class="imglist1">
+                    <li class="imgList1">
                         <div class="roll_content">
                             <a href="javascript:;">
-							<p class="roll_txtline">OOOO OOOOOOOOO OOOOOOOOO OOOOO</p>
+							<p class="roll_txtline">2OOO OOOOOOOOO OOOOOOOOO OOOOO</p>
 							</a>
                         </div>
                     </li>
-                    <li class="imglist2">
+                    <li class="imgList2">
                         <div class="roll_content">
                             <a href="javascript:;">
-							<p class="roll_txtline">OOOO OOOOOOOOO OOOOOOOOO OOOOO</p>
+							<p class="roll_txtline">3OOO OOOOOOOOO OOOOOOOOO OOOOO</p>
 							</a>
                         </div>
                     </li>
                 </ul>
                 <!-- //슬라이드이미지영역 -->
                 <!-- 슬라이드버튼영역 -->
-                <div class="rollbtnArea">
-                    <ul class="rollingbtn">
+                <div class="rollBtnArea">
+                    <ul class="rollingBtn">
                         <li class="seq butt0"><a href="#butt"><img src="img/btn_rollbutt_on.png" alt="1번" /></a></li>
                         <li class="seq butt1"><a href="#butt"><img src="img/btn_rollbutt_off.png" alt="2번" /></a></li>
                         <li class="seq butt2"><a href="#butt"><img src="img/btn_rollbutt_off.png" alt="3번" /></a></li>

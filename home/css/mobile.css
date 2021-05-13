@@ -72,3 +72,238 @@ header{
     overflow: hidden;
 }
 /* //로고영역 */
+
+/* 상단메뉴영역 */
+.openMOgnb{/* gnb: Global Navigation Bar(주로 메뉴명칭으로 사용)*/
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 35px;
+    width: 25px;
+    height: 16px
+}
+.hdd{
+    text-indent: -9999px;
+    position: absolute
+}
+
+.openMOgnb span{
+    box-sizing: border-box;/* 박스 크기를 테두리까지 크기 고정 */
+    display: block;
+    width: 25px; height: 3px;
+    margin-bottom: 4px;
+    border-radius: 10px; /* 테두리 라운드 처리 */ 
+    background: #fff;
+}
+
+.openMOgnb span:first-of-type + span {width: 17px;} /* 인접형제경합자 */
+/* .openMOgnb span + span {width: 17px;}
+.openMOgnb span:last-child{
+    width:25px;
+    margin-bottom: 0px;
+} */
+
+.header_cont{
+    float:none;
+    width: 100%;
+    background: #31353d;
+    display: none;
+    margin-top:36px;
+}
+
+.closePop{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+.closePop a{
+    display: block;
+    width: 60px; height: 60px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../img/btn_closeMenu.png) no-repeat;
+    background-size: 60px;
+}
+
+.util{padding: 20px;}
+
+.header_cont a{
+    color:#fff; font-size: 16px;
+}
+
+.util li{
+    float:left;
+}
+
+.util li::after{
+    /* ::가상요소를 추가 */
+    content: '|';
+    display:inline-block;
+    padding: 0 10px;
+    color: #a2a2a3 ;
+    font-size: 10px;
+    position:relative;
+    top: -2px;
+}
+
+.util li:last-child::after{
+    /* li 마지막 태그에 마지막부분 */
+    content: '';
+    display: none;
+    /* 둘 중 하나만 해도 된다. */
+}
+
+.gnb {
+    float: none;
+    box-sizing: border-box;
+    padding-top: 0px;
+    height: auto;
+    border-top: 1px solid #83868b;
+}
+
+.gnb li{
+    float:left;
+    width:50%;
+    text-align: left;
+    box-sizing: border-box;
+    border-bottom: 1px solid #83868b;
+}
+
+.gnb li a{
+    display: block;
+    padding: 0 0 0 65px;
+    height: 60px;
+    line-height: 60px;
+    background: url(../img/ico_gnb01.png) no-repeat 10px center;
+    background-size: 49px 56px;
+}
+
+.gnb_depth {
+    /* 2차(서브)메뉴 */
+    display: none;
+}
+
+.gnb li + li a{
+    background-image: url(../img/ico_gnb02.png);
+}
+
+.gnb li + li + li a {
+	background-image: url(../img/ico_gnb03.png);
+}
+
+.gnb li + li + li + li a {
+	background-image: url(../img/ico_gnb04.png);
+}
+
+.gnb li:nth-child(2n+1){
+    border-right: 1px solid #83868b;
+}
+
+/* //상단메뉴영역 */
+
+/* 본문컨테이너영역 */
+#container, footer, .hdd, .quick_area{
+    text-align:center;
+}
+#container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+/* 슬라이드영역 */
+.main_rolling_pc {
+    display: block;
+}
+
+.visualRoll{
+    position: relative;
+    width: 100%;
+}
+
+.viewImgList{
+    position: relative;
+    width:100%;
+}
+
+ul.viewImgList li {
+    /* ul.클래스명: ul태그중 class명이 viewImgList 영역*/
+    text-align: center;
+    height: 300px;
+    line-height: 550px;
+    background-size: cover;/* 배경 이미지의 크기를 꽉 체우는 값 */
+    width: 100%;
+}
+
+.roll_content a img{
+    display: none;
+}
+
+li.imgList0 {
+    position: relative;
+    z-index: 50;
+    background: url(../img/slide1.jpg) no-repeat;
+
+}
+
+li.imgList1 {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background: url(../img/slide1.jpg) no-repeat;
+}
+
+li.imgList2 {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background: url(../img/slide1.jpg) no-repeat;
+}
+
+.roll_content{
+    position: static;
+}
+
+.roll_content .roll_txtline{
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.rollBtnArea{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 25px;
+    z-index: 200;
+}
+
+.rollingBtn{
+    width: 320px;
+    margin: 0 auto;/* 버튼영역에 5개 들어가고, 가운데 정렬시킴 */
+    text-align: center;
+}
+
+.rollingBtn li.butt0{
+    margin-left: 10px;
+}
+.rollingBtn li{
+    display: inline-block;
+    margin-left:5px;
+}
+.rollingBtn li a{
+    vertical-align: top;/* img하고 다른 태그 사용 시 다른 태그의 세로정렬  */
+}
+/* //슬라이드영역 */
+
+/* //본문컨테이너영역 */
