@@ -5,6 +5,10 @@
 - RestAPI서버주소(빅데이터): https://coroname.me/getdata
 
 #### 20210513 (목) 작업내역
+- pixabay에서 받은 이미지 3개
+- logo: https://pixabay.com/ko/illustrations/%EB%82%98%EB%AC%B4-%EB%AF%B8%EC%9D%98-%EB%A1%9C%EA%B7%B8-%EB%AF%B8%EA%B5%AD-990861/
+- slide: https://pixabay.com/ko/photos/%EB%8F%99%EB%AC%BC-%EC%82%AC%EC%A7%84-%EC%A2%8B%EC%9D%80-%EC%9E%90%EC%97%B0-%EA%B3%A0%EC%96%91%EC%9D%B4-3215197/
+- noImage: https://pixabay.com/ko/vectors/%EC%A7%80%EA%B5%AC-%EC%97%86%EC%9D%8C-%EA%B1%B0%EC%A7%93-%EC%8B%A4%ED%8C%A8%ED%95%9C-1528493/
 - 작업폴더를 나누는 이유: 시청(관공서), 대학, 기업의 웹프로그램(사이트)를 제작 할 때, 1년간 무상 유지보수 이후 2천, 리뉴얼 4청 비용이 측정
 - home폴더 기존작업물, 리뉴얼 home에 덮어씌우는 것이 아니고,
 - 리뉴얼 할 때, home2022폴더에 작업을 하게 된다.
