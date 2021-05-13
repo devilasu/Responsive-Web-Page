@@ -5,6 +5,21 @@
 - RestAPI서버주소(빅데이터): https://coroname.me/getdata
 
 #### 20210513 (목) 작업내역
+
+
+- .openMOgnb span:first-of-type + span {width: 17px;} /* 인접형제경합자 */
+- /* .openMOgnb span + span {width: 17px;}
+- .openMOgnb span:last-child{
+-     width:25px;
+-     margin-bottom: 0px;
+- } */
+
+- .openMOgnb span:last-child{
+-     width:25px;
+-     margin-bottom: 0px;
+- }
+- .openMOgnb span:first-child + span {width: 17px;}은 왜 적용 안되는가? 밑의 span:last-child는 적용되는데?
+- .openMOgnb에 선택자를 붙이면 적용되었었다. child는 무엇이 문제인가?
 - pixabay에서 받은 이미지 3개
 - logo: https://pixabay.com/ko/illustrations/%EB%82%98%EB%AC%B4-%EB%AF%B8%EC%9D%98-%EB%A1%9C%EA%B7%B8-%EB%AF%B8%EA%B5%AD-990861/
 - slide: https://pixabay.com/ko/photos/%EB%8F%99%EB%AC%BC-%EC%82%AC%EC%A7%84-%EC%A2%8B%EC%9D%80-%EC%9E%90%EC%97%B0-%EA%B3%A0%EC%96%91%EC%9D%B4-3215197/

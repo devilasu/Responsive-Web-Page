@@ -17,6 +17,7 @@ a:hover{color:#fff !important;}
 a:visited{color:#444;}
 a{text-decoration: none;}/* 링크의 밑줄이 사라짐 */
 /* 클래스 선택자 */
+/* 부트스트랩 css 수정 */
 .clear::after{
     content: '';
     clear: both;/* 위치지정 float 속성값 초기화 */
@@ -31,6 +32,7 @@ a{text-decoration: none;}/* 링크의 밑줄이 사라짐 */
 .w100p{
     width:100% !important;
 }
+/* //부트스트랩css 수정 */
 /* //공통영역 */
 
 /* 헤더영역 */
@@ -48,3 +50,24 @@ header{
     width: 100%; margin: 0 auto;
 }
 /* //헤더영역 */
+
+/* 로고영역 */
+.header_area h1{
+    float: none;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 3px 0 0;/* 상하, 좌, 우 */
+}
+.header_area h1 a{
+    /* 로고는 이미지인데 글을 더한 이유는 웹접근성때문에 추가(스크린리더: 시각장애인용 프로그램) */
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    background: url(/home/img/logo-tree.png) no-repeat;/* css3는 함수를 지원합니다. no-repeat가 없으면 반복출력 */
+    background-size: 50px 60px !important;
+    background-position: center center !important;/* 이미지 위치 */
+    text-indent: -9999px; /* 들여쓰기 이미지만 보이고, 글자는 숨기기 위해서 */
+    overflow: hidden;
+}
+/* //로고영역 */
