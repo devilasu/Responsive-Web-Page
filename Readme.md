@@ -1,3 +1,18 @@
+#### 작업예정: jQuery JSON데이터 파싱
+- 외부data.js 파일에서 json데이터를 저장한 후 html에서 불러와서 파싱.
+- 외부 사이트에서 제공하는(RestAPI서버) json데이터를 html에서 불러와서 파싱.
+- RestAPI서버 중 코로나19 확진자 데이터를 받아서 html에서 파싱(데이터를 분해해서 화면에 뿌려주는 작업)
+- RestAPI서버주소(빅데이터): https://coroname.me/getdata
+
+#### 20210513 (목) 작업내역
+- jQuery코어 다운받기: minVersion(속도up), devVersion
+- jQuery 미처리 작업은 다음주
+- 오늘부터는 모바일 메인페이지 1개 제작 후 과제물로 제출 -> 실제 스프링에서 프로그램 입히는 소스로 사용
+- 애니데스크(독일산): 팀뷰어(독일산) 사용하는 대신에 애니데스크 사용.
+- html5.html, css.html, js.html 여기까지
+- jQuery 기본구조만 실습했습니다.
+
+- <button onclick="checkValue()">입력값 확인</button> 는 줄 색이 바뀌는 jQuery에서 느림
 #### 20210512 (수) 작업내역
 - jQuery 사용법: jQuery cdn 검색
 - document.getElements~를 통해 ID, Name,ClassName등을 통하여 하나의 배열로 선택가능하다.
