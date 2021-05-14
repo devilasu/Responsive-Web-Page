@@ -6,6 +6,21 @@ $(document).ready(function(){
     $("#checkValue").click(function(){
         alert($("#name").val());
         $("#one").css("backgroundColor","blue");
-    })
+    });
     // html 문서를 다 읽은 후 내용 실행.
 });
+
+  $(document).ready(function(){
+      for(var i = 0; i< jsonData.length;i++)
+      {
+        //   jsonData 파싱
+        // append는 가상 선택자의 after과 같다.
+          $("#board tbody").append("<tr>");
+          $("#board tbody").append("<td style='text-align:center'>"+(i+1)+"</td>");
+          $("#board tbody").append("<td>"+jsonData[i].id+"</td>");
+          $("#board tbody").append("<td>"+jsonData[i]["name"]+"</td>");
+          $("#board tbody").append("<td>"+jsonData[i].age+"</td>");
+          $("#board tbody").append("<td>"+jsonData[i].eyeColor+"</td>");
+          $("#board tbody").append("</tr>");
+      }
+  });
