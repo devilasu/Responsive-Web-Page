@@ -5,8 +5,6 @@
 - RestAPI서버주소(빅데이터): https://coroname.me/getdata
 
 #### 20210513 (목) 작업내역
-
-
 - .openMOgnb span:first-of-type + span {width: 17px;} /* 인접형제경합자 */
 - /* .openMOgnb span + span {width: 17px;}
 - .openMOgnb span:last-child{

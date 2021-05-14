@@ -13,7 +13,7 @@ body{ /* body태그 안에 a태그에는 적용X */
 dl, ol, ul{margin-bottom: 0 !important;}
 #container a:hover {color: #000 !important;}/* : 가상선택자, ::가상요소 */
 a:link{color:#444;}
-a:hover{color:#fff !important;}
+a:hover{color:#fff !important;}/* important 붙은 호버 색 강제적용 */
 a:visited{color:#444;}
 a{text-decoration: none;}/* 링크의 밑줄이 사라짐 */
 /* 클래스 선택자 */
@@ -97,6 +97,7 @@ header{
 }
 
 .openMOgnb span:first-of-type + span {width: 17px;} /* 인접형제경합자 */
+/* OR .openMOgnb span:nth-child(2) + span {width: 17px;} /* 인접형제경합자 */
 /* .openMOgnb span + span {width: 17px;}
 .openMOgnb span:last-child{
     width:25px;

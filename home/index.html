@@ -21,16 +21,16 @@
 footer{
     border-top: 1px solid #ddd;
 }
-.foot_area{
+.foot_area{ 
     box-sizing: border-box;
     padding: 0 20px 90px;
-    position: relative;
+    position: relative; /* relative 가 있다는 것은 foot_area안쪽에 태그의 기준으로 사용한다는 의미 */
 }
 .foot_list{
     padding-top:20px;
 }
 .foot_list li{
-    float:left;
+    float:left; /* 세로배치 컨텐츠를 가로로 배치하는 역할 */
 }
 .foot_list li:first-child::after{
     content: '|';
@@ -40,6 +40,44 @@ footer{
     position: relative;
     top: -2px;
 }
+.foot_list li a{
+	font-weight: bold;
+	font-size: 15px;
+}
+.foot_list li a:hover{
+	color: aquamarine !important;
+}
+
+.foot_area h2{
+	padding-top: 15px;
+	font-size: 14px;
+	color: #666;
+}
+.addr{
+	line-height: 1.3;
+	font-size: 14px;
+	color: #767676;
+	padding-top: 5px;
+}
+.br_line{display:block;}
+.copy{
+	padding: 3px 0 20px;
+	font-size: 14px;
+	color: #767676;
+}
+.snslink{
+	position: static;
+	width: 210px;
+	margin: 10px auto;
+}
+.snslink li:first-child{
+	margin-left: 0px;
+}
+.snslink li{
+	margin-left:30px;
+	float:left;
+}
+
 /* //푸터영역 */
  
 </style>
