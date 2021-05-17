@@ -17,7 +17,39 @@ $(document).ready(function(){
         url: "https://coroname.me/getdata",
         dataType: "json",//RestApi서버에서 전송받은 데이터 형식을 명시, json, text
         success:function(result){
-            // var jsonData = JSON.parse(result);  //텍스트를 json으로 파싱
+            var tmpJ = '';
+            var jsonData = result.data;
+            var i = 0;
+            for(var jsonOne of jsonData)
+            {
+                if(i==5) break;
+                i++;
+                tmpJ += "<tr style='background-color:green'>";
+                tmpJ += "<td style='text-align:center'>"+i+"</td>";
+                tmpJ += "<td>"+jsonOne.place+"</td>";
+                tmpJ += "<td>"+jsonOne.latlng+"</td>";
+                tmpJ += "<td>"+jsonOne.createDate+"</td>";
+                tmpJ += "<td>"+jsonOne.region+"</td>";
+                tmpJ += "</tr>";
+            }
+            $("#board tbody").prepend(tmpJ);
+            
+                //오리지날 for 반복문 사용
+                tmpJ = '';
+            for(i=0;i<jsonData.length; i++)
+            {
+                if(i == 10) break;
+                tmpJ += "<tr style='background-color:blue'>";
+                tmpJ += "<td style='text-align:center'>"+(i+1)+"</td>";
+                tmpJ += "<td>"+jsonData[i].place+"</td>";
+                tmpJ += "<td>"+jsonData[i].latlng+"</td>";
+                tmpJ += "<td>"+jsonData[i].createDate+"</td>";
+                tmpJ += "<td>"+jsonData[i].region+"</td>";
+                tmpJ += "</tr>";
+            }
+            $("#board tbody").append(tmpJ);
+
+                        // var jsonData = JSON.parse(result);  //텍스트를 json으로 파싱
             console.log(result);//result에는 위 url에서 dataType형식으로 받은 자료가 저장됨
         },
         error:function(result){
@@ -25,6 +57,8 @@ $(document).ready(function(){
 
         }//url Rest서버가 정전, 프로그램에러일때, 처리할 내용 명시.
     });
+
+
 
     //jsp(java)방식에서 파싱하는 방법
     //향상된 for반복문
@@ -65,7 +99,7 @@ $(document).ready(function(){
       {
         //   jsonData 파싱
         // append는 가상 선택자의 after과 같다.
-        //+=대신 .push도 사용가능(배열로 선언하여)
+        //+=대신 .push도 사용가능(배열로 선언하여) 그런데 이건 자동으로 닫아진다.
         tmpTable += "<tr style='background-color:yellow'>";
         tmpTable += "<td style='text-align:center'>"+(i+1)+"</td>";
         tmpTable += "<td>"+jsonData[i].id+"</td>";
