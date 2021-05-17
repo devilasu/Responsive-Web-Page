@@ -17,15 +17,18 @@
 <!-- 여기서부터는 사용자 정의형 스타일 + 스크립트 추가 -->
 <script src="/home/js/main.js"></script>
 <link rel="stylesheet" href="/home/css/mobile.css">
+<script src="/home/js/slideMain.js"></script>
 <style>
 	/* 테블릿용  */
 
 </style>
 <script>
-	
+
 $(document).ready(function() {
-	//play_w함수 실행(버그가 나는데 써야할 이유에 대한 고민중.)
-	// slideAuto = setTimeout("play_w('right')",3000);
+
+	//슬라이드 실행부분.
+	slideAuto = setTimeout("play_w('right')",3000);
+	//play_w함수 실행(3초가 되기 전에 미리 누르면 버튼이 다 사라지는 버그 발생.)
 	// var slidePlay_hide = setTimeout(function(){
 	// 	$(".rollPlay").css("display","none");
 	// },3000);
@@ -49,7 +52,7 @@ $(document).ready(function() {
 		play_w("right");
 	});
 
-	//사진의 버튼을 클릭했을 때
+	//슬라이드의 3가지 버튼
 	$(".rollingBtn li.seq a").each(function(index){
 		$(this).click(function(){
 			$(".rollPlay").hide();
