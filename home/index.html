@@ -19,7 +19,56 @@
 <link rel="stylesheet" href="/home/css/mobile.css">
 <script src="/home/js/slideMain.js"></script>
 <style>
-	/* 테블릿용  */
+	/* 테블릿용 메인페이지 스타일 지정 */
+	@media all and (min-width:801px){
+		/* 상단로고와 메뉴스타일 */
+		header{
+			height:113px;
+		}
+		.header_area h1{
+			float:left;
+			padding: 15px 20px 0;
+			width: auto;
+			height: inherit;/* inherit:현재영역의 부모의 속성을 그대로 사용하겠다. */
+			text-align: inherit;
+		}
+		.header_area h1 a{
+			display: block;
+			width: 100px;
+			height: 80px;
+			background-size: 70px 80px !important;
+		}
+		.openMOgnb{
+			display:none;
+		}
+		.header_cont{
+			display: block;
+			float:right;
+			width:60%;
+			padding-right:20px;
+			background:none;
+			margin-top:0px;
+		}
+		.closePop{
+			display:none;
+		}
+		.util{
+			padding:0;
+			text-align: right;
+			padding-top: 10px;
+		}
+		.util li{
+			float: none;
+			display: inline;
+		}
+		.util li::after{
+			color: #fff;
+		}
+		
+
+		/* //상단로고와 메뉴스타일 */
+
+	}
 
 </style>
 <script>
