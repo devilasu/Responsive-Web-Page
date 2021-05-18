@@ -186,15 +186,15 @@ header{
     display: none;
 }
 
-.gnb li + li a{
+.gnb li:nth-child(2) a{
     background-image: url(../img/ico_gnb02.png);
 }
 
-.gnb li + li + li a {
+.gnb li:nth-child(3) a {
 	background-image: url(../img/ico_gnb03.png);
 }
 
-.gnb li + li + li + li a {
+.gnb li:nth-child(4) a {
 	background-image: url(../img/ico_gnb04.png);
 }
 
