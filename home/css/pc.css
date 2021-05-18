@@ -10,6 +10,7 @@
         }
         .gnb li a{
             padding:26px 40px;
+            padding-right:0;
         }
         .gnb_depth{
             position: absolute;
@@ -18,18 +19,19 @@
             width: 100%;
             background: rgba(250, 100, 0, 0.85);
             z-index: 100;
-            /* display: block; */
         }
         .gnb_depth .submenu_list{
             float:right;
         }
         .gnb_depth .submenu_list li{
             float:right;
-            padding-right:40px;
         }
     
         .gnb_depth2_1 .submenu_list li{
-            padding-right:150px;
+            padding-right:120px;
+        }
+        .gnb_depth2_2 .submenu_list li{
+            padding-right:10px;
         }
     
         .submenu_list{
