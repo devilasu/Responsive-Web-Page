@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 테블릿용 메인페이지 스타일 지정 */
 @media all and (min-width:801px){
     /* 상단로고와 메뉴스타일 */
@@ -67,6 +68,7 @@
         height: inherit;
         line-height: inherit;
     }
+    
     .gnb li:nth-child(1) a{
         background: none;
     }
