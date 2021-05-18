@@ -378,6 +378,7 @@ bbs_line h3{
 /* 푸터영역 */
 footer{
     border-top: 1px solid #ddd;
+    text-align: left;
 }
 .foot_area{ 
     box-sizing: border-box;

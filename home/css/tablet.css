@@ -189,4 +189,31 @@
 		}
 		/* //전화상담과 최근공지사항 */
 
+		/* 푸터영역 */
+		footer{
+			padding: inherit;
+			text-align: left;
+		}
+		.foot_area{
+			padding-left:20px;
+			padding-bottom: 0px;
+		}
+		.addr{
+			font-size: 13px;
+			line-height: 1.4;
+		}
+		.br_line{
+			display: inherit;/* 모바일에서 적용했던 스타일 해제 하겠다는 의미. */
+		}
+		.snslink{
+			position: absolute; /* 현재 태그를 고정위치로 만들겠다. */
+			right: 20px;
+			top: 20px;
+			width: auto;
+			margin: inherit;
+		}
+		.snslink li{
+			margin-left: 15px;
+		}
+		/* //푸터영역 */
 }
