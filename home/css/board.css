@@ -191,10 +191,11 @@ input::placeholder{ /*IE브라우저용 css스타일 크로스브라우징 */
     /* 테블릿+PC용 */
     .bbsListTbl th:nth-child(1){
         display:table-cell;
+        width: 6%;
         margin-top:7px; /* IE브라우저 호환성=크로싱브라우징 처리 */
     }
     .bbsListTbl th:nth-child(2){
-        width: 60%
+        width: 65%
     }
     .bbsListTbl th:nth-child(3){
         display: table-cell;
