@@ -22,18 +22,46 @@
 <link rel="stylesheet" href="/home/css/board.css">
 <script src="/home/js/slideMain.js"></script>
 <style>
-    /* 모바일용 게시판 스타일 */
-    /* 게시판 공통영역 */
-    .bbsListTbl a:hover, .pagination a:hover, .bbs_title a:hover, .tit_lbl a:hover{
-        color: #000 !important;
-    }/* a태그의 가상선택자로 hover시 색상 검은색으로 변경 */
-    
-	/* tablet용 메인페이지 스타일 지정 */
-	@media all and (min-width:801px){
-	}
-	/* PC용 메인페이지 스타일 지정 */
-	@media all and (min-width:1066px){
-	}
+/* tablet용 메인페이지 스타일 지정 */
+@media all and (min-width:801px){
+    /* 테블릿+PC용 */
+    .bbsListTbl th:nth-child(1){
+        display:table-cell;
+        margin-top:7px; /* IE브라우저 호환성=크로싱브라우징 처리 */
+    }
+    .bbsListTbl th:nth-child(2){
+        width: 60%
+    }
+    .bbsListTbl th:nth-child(3){
+        display: table-cell;
+        margin-top:7px;
+    }
+    .bbsListTbl th:nth-child(4){
+        width:20%;
+    }
+    .bbsListTbl td:nth-child(1){
+        display:table-cell;
+    }
+    .bbsListTbl td:nth-child(3){
+        display: table-cell;
+    }
+    .btn_baseColor{
+        width: 125px;
+        font-weight: normal;
+    }
+    .bbsListTbl td a{
+        overflow: inherit;
+        text-overflow: inherit;
+        white-space: inherit;
+        display:block;
+        width: inherit;
+    }
+    /* //태블릿 + PC용 */
+}
+/* PC용 메인페이지 스타일 지정 */
+@media all and (min-width:1066px){
+}
+
 </style>
 <script>
 $(document).ready(function() {
@@ -194,7 +222,6 @@ $(document).ready(function() {
 			
 			<!-- 페이징처리영역 -->
 			<div class="pagination">
-				<a href="javascript:;" class="firstpage  pbtn"><img src="img/btn_firstpage.png" alt="첫 페이지로 이동"></a>
 				<a href="javascript:;" class="prevpage  pbtn"><img src="img/btn_prevpage.png" alt="이전 페이지로 이동"></a>
 				<a href="javascript:;"><span class="pagenum currentpage">1</span></a>
 				<a href="javascript:;"><span class="pagenum">2</span></a>
@@ -202,7 +229,7 @@ $(document).ready(function() {
 				<a href="javascript:;"><span class="pagenum">4</span></a>
 				<a href="javascript:;"><span class="pagenum">5</span></a>
 				<a href="javascript:;" class="nextpage  pbtn"><img src="img/btn_nextpage.png" alt="다음 페이지로 이동"></a>
-				<a href="javascript:;" class="lastpage  pbtn"><img src="img/btn_lastpage.png" alt="마지막 페이지로 이동"></a>
+				
 			</div>
 			<!-- //페이징처리영역 -->
 			<p class="btn_line">
