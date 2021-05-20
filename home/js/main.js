@@ -27,7 +27,7 @@
 		//pc용에서만 액션이 가능하도록 조건 추가.
 			if(parseInt($("header").css("width"))>1049){
 				// stop()가 들어가는 것으로 어느정도 원하는데로 구동되는데 어떤 식인지 아직 의문이다. 공부 필요함.
-				$(".gnb_depth2_1").stop();
+				$(".gnb_depth2_1").queue("fx",[]).stop();
 				$(".gnb_depth2_1").fadeIn("fast");
 			}
 			isOver1 = true;
@@ -53,7 +53,7 @@
 	//대메뉴2에 마우스 오버일때 gnb2_2 보이는 이벤트
 		$(".openAll2").mouseover(function(){
 			if(parseInt($("header").css("width"))>1049){
-			$(".gnb_depth2_2").stop();
+			$(".gnb_depth2_2").queue("fx",[]).stop();
 			$(".gnb_depth2_2").fadeIn("fast");
 			}
 		});
