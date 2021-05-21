@@ -21,7 +21,11 @@
 - board_write.html 파일에 bootstrap코어import + 서머노트플러그인 import.
 - 반응형 서브페이지들(loginPage, 회원가입Page, myPage).
 - 관리자단 AdminLTE적용. (외원관리 CRUD, 대시보드)
-- eclipse Hello World 실습
+- eclipse Hello World 실습. 
+- 1. 다이나믹 웹프로젝트(jsp만드는 방식) 만든 후 사용자단 UI 실행 후 삭제.
+- 2. 스프링 MVC웹프로젝트 만들예정. 헬로 월드 1개 -2달간 이 프로젝트로 진행됩니다.
+- 위 스프링 프로젝트에서 자바 기초 실습예정. -> htmlUI 만든 것을 jsp변경작업 들어갑니다.
+
 
 #### 20210520 (목) 작업내용
 - main.js의 mouseover부분 연구 필요. stop()가 어떻게 작동하는지에 대하여.
