@@ -18,6 +18,7 @@
 - 부트스트랩: jQuery기반의 UI템플릿(UI프레임워크)
 - 부트스트랩(AdminLTE): dist(distribute=배포폴더), pages(더미데이터), plugins(서머노트 등등)
 - 대시보드파일샘플: index.html, index2.html, index3.html 
+- board_write.html 파일에 bootstrap코어import + 서머노트플러그인 import.
 - 반응형 서브페이지들(loginPage, 회원가입Page, myPage).
 - eclipse Hello World 실습
 
