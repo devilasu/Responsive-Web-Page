@@ -20,6 +20,7 @@
 - 대시보드파일샘플: index.html, index2.html, index3.html 
 - board_write.html 파일에 bootstrap코어import + 서머노트플러그인 import.
 - 반응형 서브페이지들(loginPage, 회원가입Page, myPage).
+- 관리자단 AdminLTE적용. (외원관리 CRUD, 대시보드)
 - eclipse Hello World 실습
 
 #### 20210520 (목) 작업내용
