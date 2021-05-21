@@ -296,3 +296,112 @@ input::placeholder{ /*IE브라우저용 css스타일 크로스브라우징 */
         text-align: center;
     }
 }
+
+/* mobile용 글쓰기 스타일 */
+/* 게시판 글쓰기 폼 */
+.appForm{
+	margin:20px auto;
+	text-align: left;
+}
+.appForm legend{ /* legend 는 범례 */
+	font-size:0px;
+}/* 시각장애인용(웹 접근성) 처리 */
+.pilsoo_item::before{
+	content: '*';
+	display: inline-block;
+	position: absolute;
+	left: 5px;
+	width: 15px;
+	font-weight: bold;
+	font-size: 17px;
+	color: red;
+}
+.info_pilsoo{
+	position: relative;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #000;
+	font-size: 15px;
+	color: red;
+}
+
+.app_list{
+	padding: 10px 0;
+	/* border-bottom: 1px solid #ccc; */
+}
+
+.app_list li{
+	position: relative;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.app_list li .tit_lbl{
+	float: none;
+	line-height: 50px;
+	position: relative;
+	box-sizing:border-box;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 17px;
+	letter-spacing: -2px;
+}
+
+.app_content{
+	float: none;
+	width: auto;
+	border: 1px solid #ccc;
+	margin-left: 1px;
+}
+
+.app_content input{
+	border: none;
+	width: inherit;
+	box-sizing: border-box;
+	display: inline-block;
+	height: 45px;
+	padding: 0 10px;
+	line-height: normal;
+	font-size: 15px;
+}
+
+.appForm textarea{
+	height: 130px;
+	box-sizing:border-box;/* 테두리까지 너비값에 포함시킴 */
+	padding: 10px;
+	font-size: 15px;
+	letter-spacing: -1px;
+	color: #444;
+	border: none;
+}
+.appForm textarea::placeholder{ /* 최신 브라우저에 적용 */
+	color:#999
+}
+
+textarea:-ms-input-placeholder{ /* ms사 브라우저에 적용 최소 현재는 IE10이상 표준 */
+	color: #999;
+}
+.btn_baseColor{
+	margin-top: 10px;
+}
+
+/* //게시판 글쓰기 폼 */
+/* //mobile용 글쓰기 스타일 */
+
+/* tablet용 메인페이지 스타일 지정 */
+@media all and (min-width:801px){
+	/* 글쓰기 폼 스타일 */
+	.app_list .tit_lbl{
+		width: 20%;
+        box-sizing: border-box;
+	}
+	.app_list .app_content{
+        box-sizing: border-box;
+		width: 79%;
+		float: right;
+		border: 1px solid #ccc;
+	}
+	.btn_line{text-align: center;}
+	.appForm textarea{height: 230px;}
+	/* //글스기 폼 스타일 */
+}

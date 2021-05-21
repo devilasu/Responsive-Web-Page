@@ -12,13 +12,17 @@
 - 톰캣: 이클립스에서 웹프로그램 결과를 확인하는 라이브서버 입니다.(localhost:8080)
 - 라이브서버(아파치): VS code에서 HTML결과를 확인하는 라이브서버(localhost:5500)
 
-#### 20210521 (금) 작업예정
+#### 20210521 (금) 작업내용
 - 반응형 게시판페이지(CRUD) CSS 처리: Create(Update) = board_write.html
-- 반응형 서브페이지들(loginPage, signinPage, myPage).
+- 글쓰기폼에서 첨부파일 부분, 내용입력부분의 웹에디터를 추가.
+- 부트스트랩: jQuery기반의 UI템플릿(UI프레임워크)
+- 부트스트랩(AdminLTE): dist(distribute=배포폴더), pages(더미데이터), plugins(서머노트 등등)
+- 대시보드파일샘플: index.html, index2.html, index3.html 
+- 반응형 서브페이지들(loginPage, 회원가입Page, myPage).
 - eclipse Hello World 실습
 
 #### 20210520 (목) 작업내용
-- main.js의 mouseover부분 수정 필요.
+- main.js의 mouseover부분 연구 필요. stop()가 어떻게 작동하는지에 대하여.
 - 메인페이지 시간이 걸리는 부분(프런트엔드):메뉴처리, 슬라이딩처리
 - 메인페이지 시간이 걸리는 부분(백엔드): 최근갤러리, 최근공지사항 DB데이터를 출력하는 부분
 - 모바일 게시판페이지(CRUD) CSS 처리: Read(list, view페이지)
