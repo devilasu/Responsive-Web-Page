@@ -21,8 +21,23 @@
 <link rel="stylesheet" href="/home/css/pc.css">
 <link rel="stylesheet" href="/home/css/board.css">
 <script src="/home/js/slideMain.js"></script>
+<!-- fontawesome CSS import -->
+<link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
+<!-- 부트스트랩CSS코어 import -->
+<link rel="stylesheet" href="/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<!-- 부트스트랩JS코어 import -->
+<script src ="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- adminLTE전용CSS코어 import-->
+<link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
 <style>
 
+.timeline, .card-default{
+	text-align: left;
+}
+
+.bs-stepper-content{
+	margin: 20px 10px;
+}
 
 /* tablet용 메인페이지 스타일 지정 */
 @media all and (min-width:801px){
@@ -134,6 +149,80 @@ $(document).ready(function() {
 			
 		</div>
 		<!-- //메인본문영역 -->
+
+		<!-- 댓글 영역 -->
+		<div class="container-fluid">
+			<!-- Timelime example  -->
+			<div class="row">
+					<!-- 댓글 입력 폼 -->
+					<div class="col-md-12">
+						<div class="card-default">
+						  <div class="card-header">
+							<h3 class="card-title">댓글 작성</h3>
+						  </div>
+						  <div class="card-body p-0">
+							<div class="bs-stepper linear">
+							  <div class="bs-stepper-header" role="tablist">
+							  <div class="bs-stepper-content">
+								<!-- your steps content here -->
+								<div id="logins-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="logins-part-trigger">
+								  <div class="form-group">
+									<label for="replyer">작성자</label>
+									<input type="text" class="form-control" id="replyer" placeholder="작성자를 입력해 주세요.">
+								  </div>
+								  <div class="form-group">
+									<label for="reply_text">댓글내용</label>
+									<input type="text" class="form-control" id="reply_text" placeholder="내용을 입력해 주세요.">
+								  </div>
+								</div>
+								<div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger"></div>
+								  <button type="button" class="btn btn-warning" id="reply_write_btn">댓글등록</button>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						<div class="card-footer">
+							아래 댓글리스트 버튼을 클릭하시면 댓글 목록이 나옵니다.
+						</div>
+					  </div>
+					<!-- //댓글 입력 폼 -->
+			  <div class="col-md-12">
+				<!-- The time line -->
+				<div class="timeline">
+				  <!-- timeline time label -->
+				  <div class="time-label">
+					<span class="bg-red">댓글 리스트[<span>2</span>]</span>
+				  </div>
+				  <!-- /.timeline-label -->
+				  <!-- timeline item -->
+				  <!-- 댓글리스트를 자바스크립트의 빵틀(templete)을 만듭니다. -->
+				  <!-- 기존 퍼블리셔가 만든 태그를 그대로 사용 가능 -->
+				  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+				  <script id="templete" type="text/x-handlebars-template">
+					{{#each .}}
+				  <div class="div_templete" data-rno="{{rno}}">
+					<i class="fas fa-envelope bg-blue"></i>
+					<div class="timeline-item">
+					  <h3 class="timeline-header">{{replyer}}</h3>
+					  <div class="timeline-body">
+						{{reply_text}}
+					  </div>
+					  <div class="timeline-footer">
+						<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-reply">수정</a>
+					  </div>
+					</div>
+				  </div>
+				  {{/each}}
+				</script>
+				  <!-- END timeline item -->
+
+				</div>
+			  </div>
+			  <!-- /.col -->
+			</div>
+		  </div>
+		  <!-- //댓글 영역 -->
 	</div>
     <!-- //메인컨텐츠영역 -->
 	
@@ -169,5 +258,47 @@ $(document).ready(function() {
 </div>
 <!-- //하단퀵메뉴영역 -->
 
+<!-- 모달창(초기에 안보임) -->
+<div class="modal fade" id="modal-reply">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h4 class="modal-title">작성자이름</h4>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">×</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <input type="text" class="form-control" id="modal_reply_text" placeholder="댓글내용수정">
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+		  <button type="button" class="btn btn-primary">수정</button>
+		  <button type="button" class="btn btn-danger">삭제</button>
+		</div>
+	  </div>
+	  <!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+  </div>
+
+  <script>
+	  $(document).ready(function(){
+		  $("#reply_write_btn").click(function(){
+			  $.ajax({
+				  method:"get",
+				  url:"./board_view.html",//RestAPI
+				  dataType:"text",
+				  success:function(result){
+					//   alert("RestAPI성공");
+					
+				  },
+				  error:function(){
+					  alert("RestApi서버가 작동하지 않습니다.");
+				  }
+			  });
+		  });
+	  });
+  </script>
 </body>
 </html>

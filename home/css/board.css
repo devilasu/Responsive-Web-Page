@@ -403,5 +403,5 @@ textarea:-ms-input-placeholder{ /* ms사 브라우저에 적용 최소 현재는
 	}
 	.btn_line{text-align: center;}
 	.appForm textarea{height: 230px;}
-	/* //글스기 폼 스타일 */
+	/* //글쓰기 폼 스타일 */
 }
