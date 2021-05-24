@@ -199,15 +199,13 @@ $(document).ready(function() {
 				  <!-- 댓글리스트를 자바스크립트의 빵틀(templete)을 만듭니다. -->
 				  <!-- 기존 퍼블리셔가 만든 태그를 그대로 사용 가능 -->
 				  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
-				  <script id="templete" type="text/x-handlebars-template">
+				  <script id="template" type="text/x-handlebars-template">
 					{{#each .}}
-				  <div class="div_templete" data-rno="{{rno}}">
+				  <div class="div_template" data-rno="{{rno}}">
 					<i class="fas fa-envelope bg-blue"></i>
 					<div class="timeline-item">
 					  <h3 class="timeline-header">{{replyer}}</h3>
-					  <div class="timeline-body">
-						{{reply_text}}
-					  </div>
+					  <div class="timeline-body">{{reply_text}}</div>
 					  <div class="timeline-footer">
 						<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-reply">수정</a>
 					  </div>
@@ -275,6 +273,7 @@ $(document).ready(function() {
 		  <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
 		  <button type="button" class="btn btn-primary">수정</button>
 		  <button type="button" class="btn btn-danger">삭제</button>
+		  <input type="hidden" id="rno" name="rno">
 		</div>
 	  </div>
 	  <!-- /.modal-content -->
@@ -283,6 +282,14 @@ $(document).ready(function() {
   </div>
 
   <script>
+	  //화면을 재구현하는 함수
+	  var printReplyList = function(data, target, templateObject){
+		  var template = Handlebars.compile(templateObject.html()); //html태그로 변환
+		  var html = template(data); //빅데이터를 리스트템플릿에 바인딩 결합시켜주는 역할
+		  $(".div_template").remove();//화면에 보이는 댓글리스트만 지우기
+		  target.after(html);
+	  };
+
 	  $(document).ready(function(){
 		  $("#reply_write_btn").click(function(){
 			  $.ajax({
@@ -291,13 +298,30 @@ $(document).ready(function() {
 				  dataType:"text",
 				  success:function(result){
 					//   alert("RestAPI성공");
-					
+					result = [
+						{rno:1, bno:2, reply_text:"첫번째 댓글입니다.",replyer:"관리자", regdate:1621833045},
+						{rno:2, bno:2, reply_text:"두번째 댓글입니다.",replyer:"관리자", regdate:1601234512345}
+					];
+					//자바스크립트는 함수기반 구조화된 언어.
+					printReplyList(result, $(".time-label"),$("#template"));
 				  },
 				  error:function(){
 					  alert("RestApi서버가 작동하지 않습니다.");
 				  }
 			  });
 		  });
+	  });
+  </script>
+
+
+<!-- 팝업창 내용 동적으로 변경 -->
+  <script>
+	  $(document).ready(function(){
+		  $(".timeline").on("click", ".div_template",function(){
+			  $("#rno").val($(this).attr("data-rno"));
+			  $(".modal-title").html($(this).find(".timeline-header").text());
+			  $("#modal_reply_text").val($(this).find(".timeline-body").text());
+		  })
 	  });
   </script>
 </body>
