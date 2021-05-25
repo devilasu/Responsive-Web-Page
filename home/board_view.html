@@ -286,7 +286,7 @@ $(document).ready(function() {
 					];
 					//자바스크립트는 함수기반 구조화된 언어.
 					printReplyList(result, $("#collapseReply"),$("#template"));
-					printPagingList($(".pagination"));
+					printPagingList(5, $(".pagination"));
 				  },
 				  error:function(){
 					  alert("RestApi서버가 작동하지 않습니다.");
@@ -302,11 +302,24 @@ $(document).ready(function() {
 		  target.prepend(html);
 	  };
 	  //페이징을 재구현하는 함수
-	  var printPagingList = function(target){
+	  var printPagingList = function(pageVO, target){
 		  var paging = "";
-		  paging +='<li class="paginate_button page-item previous disabled" id="example1_previous">';
-			paging += '<a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>'
-		  target.html(paging);
+			paging +='<li class="paginate_button page-item previous disabled" id="example1_previous">';
+			paging += '<a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>'
+			paging += '</li>';
+			var active = "";
+			for(var i = 0; i<pageVO; i++)
+			{
+				if(i==0) {active = "active";} else {active = '';}
+					paging += '<li class="paginate_button page-item '+ active+'">';
+					paging += '<a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">'+(i+1)+'</a>';
+					paging += '</li>';
+			}
+			//next출력
+			paging += '<li class="paginate_button page-item next" id="example1_next">';
+			paging += '<a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a>';
+			paging += '</li>';
+			target.html(paging);
 	  }
 
 	  $(document).ready(function(){
@@ -349,5 +362,6 @@ $(document).ready(function() {
 	</div>
 	{{/each}}
 	</script>
+
 </body>
 </html>
