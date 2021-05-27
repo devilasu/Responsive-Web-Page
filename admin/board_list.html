@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>게시판 리스트</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -172,20 +172,26 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">게시판 리스트</h3>
-
-                  <div class="card-tools">
-                    <div class="input-group input-group-sm" style="width: 150px;">
+                  <div class="card-tools col-9">
+                    <form class="form-horizontal" name="form_search" action="board_list.html" method="get">
+                    <div class="input-group input-group-sm">
+                        <select class="form-control col-3">
+                          <option>전체</option>
+                          <option>제목</option>
+                          <option>내용</option>
+                        </select>
                       <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
                       <div class="input-group-append">
                         <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
                       </div>
                     </div>
+                  </form>
                   </div>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive p-0">
-                  <table class="table table-hover">
+                  <table class="table table-hover">  <!-- text-nowrap 줄바꿈 안할때 -->
                     <thead>
                       <tr>
                         <th>ID</th>
@@ -229,39 +235,41 @@
                 </div><!-- /.card-body -->
                 <!-- .card-footer -->
                 <div class="card-footer clearfix">
-                  <div class="row">
-                    <div class="col-sm-12 col-md-7">
-                      <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-                        <ul class="pagination">
-                          <li class="paginate_button page-item previous disabled" id="example2_previous">
-                            <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0"
-                              class="page-link">Previous</a>
-                          </li>
-                          <li class="paginate_button page-item active">
-                            <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a>
-                          </li>
-                          <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="2"
-                              tabindex="0" class="page-link">2</a></li>
-                          <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="3"
-                              tabindex="0" class="page-link">3</a></li>
-                          <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="4"
-                              tabindex="0" class="page-link">4</a></li>
-                          <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="5"
-                              tabindex="0" class="page-link">5</a></li>
-                          <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="6"
-                              tabindex="0" class="page-link">6</a></li>
-                          <li class="paginate_button page-item next" id="example2_next"><a href="#"
-                              aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
                 </div><!-- /.card-footer -->
-
-              </div>
-              <!-- /.card -->
+              </div> <!-- /.card -->
             </div>
           </div><!-- /컨텐츠 내용 -->
+          <div class="row" >
+            <div class="col-12">
+              <div class="text-right">
+                <button class="btn btn-primary">글쓰기</button>
+              </div>
+              
+              <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                <ul class="pagination justify-content-center">
+                  <li class="paginate_button page-item previous disabled" id="example2_previous">
+                    <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0"
+                      class="page-link">Previous</a>
+                  </li>
+                  <li class="paginate_button page-item active">
+                    <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                  </li>
+                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="2"
+                      tabindex="0" class="page-link">2</a></li>
+                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="3"
+                      tabindex="0" class="page-link">3</a></li>
+                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="4"
+                      tabindex="0" class="page-link">4</a></li>
+                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="5"
+                      tabindex="0" class="page-link">5</a></li>
+                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="6"
+                      tabindex="0" class="page-link">6</a></li>
+                  <li class="paginate_button page-item next" id="example2_next"><a href="#"
+                      aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div><!-- /.container-fluid -->
       </section>
       <!-- /.content -->
