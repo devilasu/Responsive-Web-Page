@@ -5,6 +5,12 @@
 - UI구현 ......UI디자인 이용해서 프로그램 입히게 됩니다.
 - 관리자단 AdminLte적용-스프링때바로:(회원관리CRUD, 게시판생성관리CRUD)
 
+#### 20210528 (금) 작업예정.
+- 관리자단 admin/board_write.html, board_view.html(댓글 Ajax처리)
+- 대시보드 home.html (최근 회원가입정보, 최근 게시물 정보)
+- 이클립스로 .html을 가져가서 -> resources 폴더(static폴더): admin, home, root파일까지 배치 - 스프링 작업의 시작
+
+
 #### 20210527 (목) 작업.
 - admin/board_list.html부터 시작
 - 관리자단 AdminLTE적용. - 스프링: 회원관리CRUD, 게시판생성관리CRUD
