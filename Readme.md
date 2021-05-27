@@ -26,7 +26,7 @@
 - name: 서버전송용 사용, 내부스크립트용 사용
 - 검색엔진에 최적화: 각 태그를 의미에 맞게 사용하였는가?
 - 유효성검사: validation 입력값이 제대로된 값인지 확인하는 과정.
-- HTML5내장된 유효성 검사: required(공백 체크), type="email"(이메일형식 체크), type="password"(입력값을 숨김처리), type="number"(숫자 체크)
+- HTML5내장된 유효성 검사: required(공백 체크), type="email"(이메일형식 체크), type="password"(입력값을 숨김처리), type="number"(숫자 체크), validator lib를 사용하여 type="tel"에 number 속성 추가방식이 더 좋다.
 - JS유효성검사: 비밀번호확인(두 개의 입력값) 체크
 - 반응형 서브페이지들(로그인, 회원가입, 마이페이지).
 - HTML5부터는 유효성 검사가 내장되어 있기때문에, JS로 빈칸인지 코딩할 필요가 없습니다. required 속성을 태그에 넣으면 끝.
