@@ -5,7 +5,11 @@
 - UI구현 ......UI디자인 이용해서 프로그램 입히게 됩니다.
 - 관리자단 AdminLte적용-스프링때바로:(회원관리CRUD, 게시판생성관리CRUD)
 
-#### 20210528 (금) 작업예정.
+#### 20210528 (금) 작업
+- 데이터 전송할때 사용문장-쿼리스트링: ?키 = value&키=value 
+- 프로그램에서는 뒤로가기 허용하면, 게시물 테러가 가능합니다.
+- 뒤로가기를 허용하지 않게 페이지 이동방식(JS에서는 location.replace())
+- 뒤로가기를 허용하는 함수(JS에서는 location.href="")
 - 관리자단 admin/board_write.html, board_view.html(댓글 Ajax처리)
 - 대시보드 home.html (최근 회원가입정보, 최근 게시물 정보)
 - 이클립스로 .html을 가져가서 -> resources 폴더(static폴더): admin, home, root파일까지 배치 - 스프링 작업의 시작

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>게시판 리스트</title>
+  <title>게시판 글쓰기</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -150,7 +150,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">{게시판변수명}리스트</h1>
+              <h1 class="m-0">{게시판변수명} 상세보기</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -169,108 +169,104 @@
           <!-- 컨텐츠 내용 -->
           <div class="row">
             <div class="col-12">
-              <div class="card">
+              <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">게시판 리스트</h3>
-                  <div class="card-tools" style="width:300px;">
-                    <form class="form-horizontal" name="form_search" action="board_list.html" method="get">
-                    <div class="input-group input-group-sm">
-                        <select name="search_type" class="form-control col-3">
-                          <option>전체</option>
-                          <option>제목</option>
-                          <option>내용</option>
-                        </select>
-                      <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                      <div class="input-group-append">
-                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
-                      </div>
-                    </div>
-                  </form>
-                  </div>
+                  <h3 class="card-title">보기</h3>
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body table-responsive p-0">
-                  <table class="table table-hover text-center">  <!-- text-nowrap 줄바꿈 안할때 -->
-                    <thead>
-                      <tr>
-                        <th>ID</th>
-                        <th>User</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Reason</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- 링크 주소에 jsp에서 프로그램 처리 -->
-                      <tr style="cursor:pointer" onclick="location.replace('board_view.html?bno=183')">
-                        <td>183</td>
-                        <td>John Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-success">Approved</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      </tr>
-                      <tr>
-                        <td>219</td>
-                        <td>Alexander Pierce</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-warning">Pending</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      </tr>
-                      <tr>
-                        <td>657</td>
-                        <td>Bob Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-primary">Approved</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      </tr>
-                      <tr>
-                        <td>175</td>
-                        <td>Mike Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-danger">Denied</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div><!-- /.card-body -->
-                <!-- .card-footer -->
-                <div class="card-footer clearfix">
-                </div><!-- /.card-footer -->
-              </div> <!-- /.card -->
-            </div>
-          </div><!-- /컨텐츠 내용 -->
-          <div class="row" >
-            <div class="col-12">
-              <div class="text-right">
-                <a href="board_write.html" class="btn btn-primary">글쓰기</a>
+                <!-- form start -->
+                <!-- <form name="" method="" action="" anctype="" -->
+                <form name="form_view" action="board_view.html" enctype="multipart/form-data">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <br>
+                      {변수출력}
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <br>
+                      {변수출력}
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputFile">File input</label>
+                      <div class="input-group">
+                        <div class="custom-file">
+                          {첨부파일 다운로드}
+                        </div>
+                        <div class="input-group-append">
+                          <span class="input-group-text">Upload</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.card-body -->
+  
+                  <div class="card-footer text-right">
+                    <button type="revise" class="btn btn-primary">수정</button>
+                    <button type="delete" class="btn btn-danger">삭제</button>
+                    <a href="board_list.html" class="btn btn-default">목록</a>
+                  </div>
+                </form>
               </div>
-              
-              <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-                <ul class="pagination justify-content-center">
-                  <li class="paginate_button page-item previous disabled" id="example2_previous">
-                    <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0"
-                      class="page-link">Previous</a>
-                  </li>
-                  <li class="paginate_button page-item active">
-                    <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a>
-                  </li>
-                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="2"
-                      tabindex="0" class="page-link">2</a></li>
-                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="3"
-                      tabindex="0" class="page-link">3</a></li>
-                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="4"
-                      tabindex="0" class="page-link">4</a></li>
-                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="5"
-                      tabindex="0" class="page-link">5</a></li>
-                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="6"
-                      tabindex="0" class="page-link">6</a></li>
-                  <li class="paginate_button page-item next" id="example2_next"><a href="#"
-                      aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+              <!-- 댓글 타임라인 -->
+              <div class="col-md-12">
+                <div class="card-default">
+                  <div class="card-header">
+                  <h3 class="card-title">댓글 작성</h3>
+                  </div>
+                  <div class="card-body p-0">
+                  <div class="bs-stepper linear">
+                    <div class="bs-stepper-header" role="tablist">
+                    <div class="bs-stepper-content">
+                    <!-- your steps content here -->
+                    <div id="logins-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="logins-part-trigger">
+                      <div class="form-group">
+                      <label for="replyer">작성자</label>
+                      <input type="text" class="form-control" id="replyer" placeholder="작성자를 입력해 주세요.">
+                      </div>
+                      <div class="form-group">
+                      <label for="reply_text">댓글내용</label>
+                      <input type="text" class="form-control" id="reply_text" placeholder="내용을 입력해 주세요.">
+                      </div>
+                    </div>
+                    <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger"></div>
+                      <button type="button" class="btn btn-warning" id="btn_reply_write">댓글등록</button>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  아래 댓글리스트 버튼을 클릭하시면 댓글 목록이 나옵니다.
+                </div>
+                </div>
+              <!-- //댓글 입력 폼 -->
+            <div class="col-md-12">
+            <!-- The time line -->
+            <div class="timeline">
+              <!-- timeline time label -->
+              <div class="time-label">
+              <span id="btn_reply_list" class="bg-red" data-toggle="collapse" href="#collapseReply" role="button">
+                댓글 리스트
+                [<span>2</span>]
+              </span>
+              </div>
+              <!-- /.timeline-label -->
+              <!-- timeline item -->
+              <!-- 댓글리스트를 자바스크립트의 빵틀(templete)을 만듭니다. -->
+              <!-- 기존 퍼블리셔가 만든 태그를 그대로 사용 가능 -->
+              <div class="collapse timeline" id="collapseReply">
+                <!-- END timeline item -->
+                <ul class="pagination">
                 </ul>
               </div>
-            </div>
+            <!-- /.col -->
           </div>
+        
+              <!-- /댓글 타임라인 -->
+            </div>
+          </div><!-- /컨텐츠 내용 -->
         </div><!-- /.container-fluid -->
       </section>
       <!-- /.content -->
@@ -317,6 +313,87 @@
   <!-- <script src="dist/js/demo.js"></script> -->
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <!-- <script src="dist/js/pages/dashboard.js"></script> -->
+
+  <script>
+	  //댓글 데이터 통신 후 출력
+	  var replyList = function(){
+		$.ajax({
+				  method:"get",
+				  url:"board_view.html",//RestAPI
+				  dataType:"text",
+				  success:function(result){
+					//   alert("RestAPI성공");
+					result = [
+						{rno:1, bno:2, reply_text:"첫번째 댓글입니다.",replyer:"관리자", regdate:1601234512345},
+						{rno:2, bno:2, reply_text:"두번째 댓글입니다.",replyer:"관리자", regdate:1601234512345},
+						{rno:3, bno:2, reply_text:"세번째 댓글입니다.",replyer:"관리자", regdate:1601234512345}
+					];
+					//자바스크립트는 함수기반 구조화된 언어.
+					printReplyList(result, $("#collapseReply"),$("#template"));
+					printPagingList(5, $(".pagination"));
+				  },
+				  error:function(){
+					  alert("RestApi서버가 작동하지 않습니다.");
+				  }
+			  });
+	  }
+
+	  //화면을 재구현하는 함수
+	  var printReplyList = function(data, target, templateObject){
+		  var template = Handlebars.compile(templateObject.html()); //html태그로 변환
+		  var html = template(data); //빅데이터를 리스트템플릿에 바인딩 결합시켜주는 역할
+		  $(".div_template").remove();//화면에 보이는 댓글리스트만 지우기
+		  target.prepend(html);
+	  };
+	  //페이징을 재구현하는 함수
+	  var printPagingList = function(pageVO, target){
+		  var paging = "";
+			paging +='<li class="paginate_button page-item previous disabled" id="example1_previous">';
+			paging += '<a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>'
+			paging += '</li>';
+			var active = "";
+			for(var i = 0; i<pageVO; i++)
+			{
+				if(i==0) {active = "active";} else {active = '';}
+					paging += '<li class="paginate_button page-item '+ active+'">';
+					paging += '<a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">'+(i+1)+'</a>';
+					paging += '</li>';
+			}
+			//next출력
+			paging += '<li class="paginate_button page-item next" id="example1_next">';
+			paging += '<a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a>';
+			paging += '</li>';
+			target.html(paging);
+	  }
+
+	  $(document).ready(function(){
+		  $("#btn_reply_list").click(function(){
+			replyList();
+		  });
+		  $("#btn_reply_write").click(function(){
+			$("#collapseReply").addClass("show");
+			replyList();
+		  });
+	  });
+  </script>
+
+  <!-- 댓글내용 출력 원본 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+	<script id="template" type="text/x-handlebars-template">
+		{{#each .}}
+	<div class="div_template" data-rno="{{rno}}">
+		<i class="fas fa-envelope bg-blue"></i>
+		<div class="timeline-item">
+		<h3 class="timeline-header">{{replyer}}</h3>
+		<div class="timeline-body">{{reply_text}}</div>
+		<div class="timeline-footer">
+			<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-reply">수정</a>
+		</div>
+		</div>
+		</div>
+	</div>
+	{{/each}}
+	</script>
 </body>
 
 </html>
