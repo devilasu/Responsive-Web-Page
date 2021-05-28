@@ -3,7 +3,12 @@
 - UI디자인 끝----------------------------------------
 - UI구현 시작 -------스프링프로젝트(Java+이클립스+Oracle+Spring) 시작.
 - UI구현 ......UI디자인 이용해서 프로그램 입히게 됩니다.
+
+
+#### 20210531 (월) 작업예정
+- ERD기준으로 게시판UI 수정.
 - 관리자단 AdminLte적용-스프링때바로:(회원관리CRUD, 게시판생성관리CRUD)
+- 이클립스로 .html을 가져가서 -> resources 폴더(static폴더): admin, home, root파일까지 배치 - 스프링 작업의 시작
 
 #### 20210528 (금) 작업
 - UI트랜드용어: 카드UI, 뱃지, 리본
@@ -13,7 +18,7 @@
 - 뒤로가기를 허용하는 함수(JS에서는 location.href="")
 - 관리자단 admin/board_write.html, board_view.html(댓글 Ajax처리)
 - 대시보드 home.html (최근 회원가입정보, 최근 게시물 정보)
-- 이클립스로 .html을 가져가서 -> resources 폴더(static폴더): admin, home, root파일까지 배치 - 스프링 작업의 시작
+
 
 
 #### 20210527 (목) 작업.
