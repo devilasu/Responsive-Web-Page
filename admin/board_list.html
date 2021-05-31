@@ -172,7 +172,7 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">게시판 리스트</h3>
-                  <div class="card-tools" style="width:300px;">
+                  <div class="card-tools" style="width:70%;">
                     <form class="form-horizontal" name="form_search" action="board_list.html" method="get">
                     <div class="input-group input-group-sm">
                         <select name="search_type" class="form-control col-3">
@@ -194,42 +194,21 @@
                   <table class="table table-hover text-center">  <!-- text-nowrap 줄바꿈 안할때 -->
                     <thead>
                       <tr>
-                        <th>ID</th>
-                        <th>User</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Reason</th>
+                        <th>BNO</th>
+                        <th>BOARD_TYPE</th>
+                        <th class="col-6">TITLE</th>
+                        <th>WRITER</th>
+                        <th>REG_DATE</th>
                       </tr>
                     </thead>
                     <tbody>
                       <!-- 링크 주소에 jsp에서 프로그램 처리 -->
                       <tr style="cursor:pointer" onclick="location.replace('board_view.html?bno=183')">
                         <td>183</td>
-                        <td>John Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-success">Approved</span></td>
+                        <td>NOTICE</td>
                         <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      </tr>
-                      <tr>
-                        <td>219</td>
-                        <td>Alexander Pierce</td>
+                        <td><span class="tag tag-success">John Doe</span></td>
                         <td>11-7-2014</td>
-                        <td><span class="tag tag-warning">Pending</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      </tr>
-                      <tr>
-                        <td>657</td>
-                        <td>Bob Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-primary">Approved</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                      </tr>
-                      <tr>
-                        <td>175</td>
-                        <td>Mike Doe</td>
-                        <td>11-7-2014</td>
-                        <td><span class="tag tag-danger">Denied</span></td>
-                        <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                       </tr>
                     </tbody>
                   </table>

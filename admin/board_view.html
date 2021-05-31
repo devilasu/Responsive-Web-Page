@@ -179,23 +179,35 @@
                 <form name="form_view" action="board_view.html" enctype="multipart/form-data">
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Email address</label>
+                      <label for="exampleInputEmail1">제목</label>
                       <br>
                       {변수출력}
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Password</label>
+                      <label for="exampleInputPassword1">내용</label>
                       <br>
                       {변수출력}
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputFile">File input</label>
+                      <label for="exampleInputPassword1">작성자</label>
+                      <br>
+                      {변수출력}
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">조회수</label>
+                      <br>
+                      {변수출력}
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">작성일</label>
+                      <br>
+                      {변수출력}
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputFile">첨부파일</label>
                       <div class="input-group">
                         <div class="custom-file">
-                          {첨부파일 다운로드}
-                        </div>
-                        <div class="input-group-append">
-                          <span class="input-group-text">Upload</span>
+                          {첨부파일다운로드}
                         </div>
                       </div>
                     </div>
@@ -394,6 +406,43 @@
 	</div>
 	{{/each}}
 	</script>
+
+  <!-- 모달창(초기에 안보임) -->
+<div class="modal fade" id="modal-reply">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h4 class="modal-title">작성자이름</h4>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">×</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <input type="text" class="form-control" id="modal_reply_text" placeholder="댓글내용수정">
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+		  <button type="button" class="btn btn-primary">수정</button>
+		  <button type="button" class="btn btn-danger">삭제</button>
+		  <input type="hidden" id="rno" name="rno">
+		</div>
+	  </div>
+	  <!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+  </div>
+
+
+  <!-- 팝업창 내용 동적으로 변경 -->
+  <script>
+	  $(document).ready(function(){
+		  $(".timeline").on("click", ".div_template",function(){
+			  $("#rno").val($(this).attr("data-rno"));
+			  $(".modal-title").html($(this).find(".timeline-header").text());
+			  $("#modal_reply_text").val($(this).find(".timeline-body").text());
+		  })
+	  });
+  </script>
 </body>
 
 </html>
